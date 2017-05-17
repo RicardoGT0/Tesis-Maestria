@@ -1,63 +1,6 @@
 \documentclass[12pt,letterpaper,portrait,onecolumn,titlepage,twoside,final,openright]{book}
-\usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}			%Para que detecte los acentos
-\usepackage[spanish]{babel} 
-%\usepackage[none]{hyphenat}		%Libreria para no cortar palabras(no Hipenacion). Usar con Sloppy
-%\usepackage{resizebox}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage{inputenc}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{geometry}
-\usepackage{epsfig}
-\usepackage{array}
-\usepackage{adjustbox}
-\usepackage{url}
 
-\usepackage{colortbl} 						% Para el color en la tabla. Junto con color
-\usepackage[Lenny]{fncychap}
-
-%\usepackage[bookmarks=true]{hyperref} 		%Pone los marcadores en el pdf. Compilar con: dvi->ps, ps->pdf
-\usepackage[hidelinks]{hyperref}			%Ocultar recuadros de vinculos
-\usepackage{bookmark}                 		%Pone los marcadores en el pdf. Compilar con: dvi->ps, ps->pdf
-
-%Cambiar color de vinculos
-\usepackage{xcolor}
-
-\hypersetup
-{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
-
-\usepackage{listings}	%Insertar programas en C
-\usepackage{graphicx} %Utilizar figuras e imagenes
-\usepackage{float}
-\usepackage{subfig}		%Multiples imagenes en una figura
-\usepackage{epstopdf} %Utilizar figuras EPS desde PDF
-\usepackage{multirow}	%Para generar tablas
-\usepackage{pifont}
-
-\usepackage{booktabs}
-\usepackage{multirow,bigstrut}
-\usepackage{tabu}
-
-\newtheorem{defin}{Definición}
-\pagestyle{headings}	%Coloca los capítulos o secciones en las paginas
-\geometry{tmargin=2.5cm, lmargin=2.5cm, rmargin=2.5cm, bmargin=1.5cm}   %Coloca los márgenes
-
-
-% En caso de que se separe inadecuadamente la palabra usar:
-\hyphenation{configu-rado}
-
-%evitar que LaTeX distribuya los espacios en blanco a lo largo de la hoja
-\raggedbottom
-
+\input{preamble1.tex}
 \begin{document}
 \sloppy       %Para no cortar palabras junto con la librería hyphenat
 
@@ -80,7 +23,8 @@
 
 %\include{CapituloVI/CapituloVI} %Para la tesis
 
-\include{Bibliografia/Bibliografia} %Para la propuesta y la tesis
+\bibliographystyle{IEEEtran}
+\bibliography{Bibliografia}
 
 %\include{Apendice/Apendice} %Para la tesis
 
