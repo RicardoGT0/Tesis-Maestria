@@ -1,0 +1,59 @@
+\section{Aprendizaje M\'aquina}
+
+Como se menciona en \cite{9780471056690} ``En el sentido m\'as amplio,
+ cualquier m\'etodo que incorpore informaci\'on de ejemplo para el 
+ entrenamiento en el dise\~no de un clasificador emplea aprendizaje''.
+ Lo cual es evidente en el aprendizaje supervisado ya que en este existe 
+ un maestro explicito que proporciona la informaci\'on etiquetada
+ \cite{9780471056690}, para que sirva de ejemplo al algoritmo de los casos 
+ desconocidos que se le presentaran m\'as adelante. Pero en el aprendizaje 
+ no supervisado, no requiere un maestro explicito \cite{9780471056690}, sin 
+ embargo, se le proporciona informaci\'on sobre la tarea, por ejemplo, el 
+ n\'umero de grupos en los que hay que separar la informaci\'on proporcionada.
+
+
+En los textos \cite{9780471056690, 9780387310732} se menciona el aprendizaje 
+ por refuerzo (RL, por sus siglas en ingl\'es) como otra divisi\'on, ya que 
+ a est\'e se le proporciona un conjunto de pol\'iticas de recompensa para 
+ cumplir con un objetivo espec\'ifico, en lugar de ejemplos etiquetados como 
+ en el caso del aprendizaje supervisado, estas reglas indicaran de forma 
+ binaria cuales acciones le permite maximizar la recompensa por prueba y error.
+
+
+El aprendizaje por demostraci\'on (LfD, por sus siglas en ingl\'es)
+ \cite{ARGALL2009469} es una metodolog\'ia de aprendizaje m\'aquina que a 
+ partir del ejemplo de la tarea objetivo (proporcionado por un maestro) 
+ se generan las pol\'iticas necesarias, para que por medio del aprendizaje 
+ por refuerzo el aprendiz realice la tarea. 
+
+
+Una de las principales caracter\'isticas de esta \'ultima metodolog\'ia
+ mencionada, es la forma de adquisici\'on de datos; tele-operaci\'on o 
+ sombreado. Para la tele-operaci\'on\cite{ARGALL2009469}, el aprendiz va 
+ a grabar desde sus propios sensores mientras que el maestro va a manipular 
+ al aprendiz desde un controlador o con sus propias manos, esto proporciona 
+ un mapeo directo entre la acci\'on grabada y la acci\'on a realizar. Por 
+ otro lado, el sombreado\cite{ARGALL2009469} requiere un algoritmo adicional 
+ de mapeo, ya que est\'e seguir\'a las acciones realizadas por el maestro por 
+ medios visuales y marcadores en el maestro, mientras graba de sus propios 
+ sensores. 
+
+
+La forma de procesar los datos recabados en la adquisici\'on de datos para 
+ obtener las pol\'iticas de recompensa para el RL puede ser por: funci\'on 
+ de mapeo, plan o modelo del sistema. El usar una funci\'on de mapeo 
+ \cite{ARGALL2009469} puede ser en un enfoque continuo (Regresi\'on) o 
+ discreto (Clasificadores); los algoritmos de regresi\'on pueden ser a modo 
+ de ejemplo, aprendizaje lento (lazy learning, en ingl\'es) o regresi\'on 
+ ponderada localmente (locally weighted regression, en ingl\'es); los 
+ clasificadores usados para para el enfoque discreto pueden ser KNN 
+ (k-Nearest Neighbors, en ingl\'es), arboles de decisi\'on, redes neuronales, 
+ etc. 
+ 
+
+Para obtener las reglas a trav\'es de un modelo de sistema \cite{ARGALL2009469}
+ se realiza un mapeo del mundo en el que se va a desenvolver el aut\'omata 
+ y a partir de este con los datos recabados se generan las pol\'iticas de 
+ recompensa. Mientras que para usar un plan\cite{ARGALL2009469}, solo se 
+ considera la secuencia de acciones desde un estado inicial a un estado final 
+ objetivo con estados condicionales previos y resultantes. 
