@@ -1,26 +1,62 @@
-% ********** cap�tulo 5 **********
+% ********** capitulo 5 **********
 \chapter{Experimentos y resultados}
 \label{sec:chapter5}
-En el presente cap�tulo se propone el conjunto e experimentos a real�izar para demostar ...
 
-\section{Estudio comparativo...}
+En el presente capitulo se describe el conjunto e experimentos a realizar para evaluar la propuesta planteada ante la problemática de la discapacidad que presentan las personas con problemas de movilidad en los brazos o manos.
+
+
+\section{Introducci\'on}
+
+Los algoritmos mostrados en el capítulo \ref{sec:1} proponen formas de automatizar actividades realizadas por una persona, seria posible implementar ese tipo de solución al problema en cuestión, pero esto representaría un problema aun mayor, dado que se tendría que conocer las actividades que realiza el usuario del equipo para poder proponer la automatización de estas. 
+
+
+La propuesta planteada en este escrito propone un aprendizaje progresivo, discriminando las acciones menos frecuentes realizadas por el usuario y descartando por completo aquellas que ni se realizan. 
+
+
+\subsection{Experimentos y resultados}
+
+El uso del software no se ve limitado a las personas con movilidad reducida, este le puede servir incluso a las personas que no tengan discapacidad alguna ya que no va por una tarea objetivo específica, sino por las actividades que realice la persona de forma frecuente sin importar cuales sean. Con esto en mente, se logró obtener 4 archivos con la lista de acciones que realizaron 4 individuos sin discapacidades en sus actividades cotidianas en una computadora.
+
+
+En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad de tiempo el cual se muestra en la segunda columna tabla []. Como ya se explicó anteriormente en el capítulo [4] una acción realizada por el usuario genera un nodo, esta cantidad es mostrada en la columna 3, mientras que la columna 4 es el numero máximo de veces que se repitió un nodo y para mantener el anonimato de las personas participantes en esta prueba, se les hará referencia por un numero de ahora en adelante como se muestra en la primer columna. 
+
+No. de sujeto	&      tiempo de uso (hr:min)	&	número de nodos	&      Repeticiones
+1		&	166:23 			&	1494792		&	46036
+2		&	490:24			&	1333016		&	116001
+3		&	1060:48		&	1448016		&	378541
+4		&	148:23			&	972828			&	56606
+
+A la cada lista de acciones se le aplico el algoritmo explicado en el capítulo 4 y como se muestra en la figura 4.4 se utilizó un factor de 70 incidencias por nodo para ser candidato para formar una secuencia y un mínimo de 5 repeticiones por secuencia para declarar que la tarea es útil. 
+Las secuencias de acciones que empieza con la acción emph{Release} fueron descartadas, ya que esta acción implica que se quedó presionada una tecla o botón específico, también se rechazaron las secuencias que terminen con la acción emph{Pressed} ya que esto dejaría presionada la tecla o botón hasta que se presione físicamente o se llame la acción emph{Release} , las demás tareas son las que se consideran como válidas. Por el hecho de que este es un método cuyo aprendizaje es acumulativo, así sea que la primera secuencia sea del agrado del usuario o no, la siguiente secuencia puede contener la primera con alguna acción adicional y es probable que esta variante ya sea de utilidad al usuario, como filtro adicional se limitó a obtener secuencias de acciones con longitudes en múltiplos de 2, considerando que una tecla o botón presionado debe de ser liberado para concluir la acción. Con lo anterior como justificación es que se llegó a la siguiente tabla de resultados.
+
+No. de sujeto	&	secuencias aceptadas	&      secuencias rechazadas 
+1		&	177			&	88
+2		&	165			&	92
+3		&	167			&	92
+4		&	64			&	38
+
+
+
+
+
+
 
 %\abstract{
 Los algoritmos de ...
 
 \subsection{Introducci\'{o}n}
 \label{sec:1}
-Las t�cnicas de ...\\
+Las tecnicas de ...\\
 
-Recientemente se consider� ... \\
+Recientemente se considero ... \\
 
-En este trabajo se presentan las principales consideraciones de implantaci�nde ... 
+En este trabajo se presentan las principales consideraciones de implantacionde ... 
  
 
 
 \subsection{Experimentos y resultados}
 \subsubsection{M\'{e}tricas para ...}
-Para evaluar el desempe�o de ...
+Para evaluar el desempeno de ...
 \begin{itemize}
 \item Costo computacional
 \item Rapidez
@@ -32,7 +68,7 @@ El costo computacional, $C$, lo definimos ...
 V =\frac{1}{C}
 \label{eq:06}
 \end{equation}
-La ventaja (speedup) es la tasa que resulta de dividir la rapidez de la variante de inter�s  entre la rapidez de la variante de referencia (por ejemplo, la variante secuencial).
+La ventaja (speedup) es la tasa que resulta de dividir la rapidez de la variante de interes  entre la rapidez de la variante de referencia (por ejemplo, la variante secuencial).
 \begin{equation}
 S =\frac{V_{obj}}{V_{ref}}
 \label{eq:06}
@@ -41,7 +77,7 @@ Finalmente...
 
 
 \subsection{Desarrollo experimental}
-Las pruebas se realizaron en el sistema mencionado en la secci�n \ref{sim:sist}.
+Las pruebas se realizaron en el sistema mencionado en la seccion \ref{sim:sist}.
 
 Se llevaron a cabo una serie de experimentos para ...
 
@@ -53,20 +89,20 @@ En lo referente a...\\
 
 
 
-En general, los experimentos demostraron que el desempe�o de ...\\
+En general, los experimentos demostraron que el desempeno de ...\\
 
 
-Resumiendo, de los resultados experimentales podemos destacar, en primer lugar, el buen desempe�o que ...\\
+Resumiendo, de los resultados experimentales podemos destacar, en primer lugar, el buen desempeno que ...\\
 
 
-Los resultados experimentales tambi�n confirman ...
+Los resultados experimentales tambien confirman ...
 
 
 \subsection{An\'{a}lisis de resultados}
-En este trabajo se present� ...
+En este trabajo se presento ...
 
  
 \subsection{Discusi\'{o}n}
-Las pruebas de desempe�o indican que ...\\
+Las pruebas de desempeno indican que ...\\
 
 % ********** End of chapter **********
