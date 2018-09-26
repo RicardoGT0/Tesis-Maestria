@@ -2,12 +2,12 @@
 \chapter{Experimentos y resultados}
 \label{sec:chapter5}
 
-En el presente capitulo se describe el conjunto e experimentos a realizar para evaluar la propuesta planteada ante la problemática de la discapacidad que presentan las personas con problemas de movilidad en los brazos o manos.
+En el presente capitulo se describe el conjunto e experimentos a realizar para evaluar la propuesta planteada ante la problem\'atica de la discapacidad que presentan las personas con problemas de movilidad en los brazos o manos.
 
 
 \section{Introducci\'on}
 
-Los algoritmos mostrados en el capítulo \ref{sec:1} proponen formas de automatizar actividades realizadas por una persona, seria posible implementar ese tipo de solución al problema en cuestión, pero esto representaría un problema aun mayor, dado que se tendría que conocer las actividades que realiza el usuario del equipo para poder proponer la automatización de estas. 
+Los algoritmos mostrados en el cap\'itulo \ref{sec:1} proponen formas de automatizar actividades realizadas por una persona, seria posible implementar ese tipo de soluci\'on al problema en cuesti\'on, pero esto representar\'ia un problema aun mayor, dado que se tendr\'ia que conocer las actividades que realiza el usuario del equipo para poder proponer la automatizaci\'on de estas. 
 
 
 La propuesta planteada en este escrito propone un aprendizaje progresivo, discriminando las acciones menos frecuentes realizadas por el usuario y descartando por completo aquellas que ni se realizan. 
@@ -15,34 +15,104 @@ La propuesta planteada en este escrito propone un aprendizaje progresivo, discri
 
 \subsection{Experimentos y resultados}
 
-El uso del software no se ve limitado a las personas con movilidad reducida, este le puede servir incluso a las personas que no tengan discapacidad alguna ya que no va por una tarea objetivo específica, sino por las actividades que realice la persona de forma frecuente sin importar cuales sean. Con esto en mente, se logró obtener 4 archivos con la lista de acciones que realizaron 4 individuos sin discapacidades en sus actividades cotidianas en una computadora.
+El uso del software no se ve limitado a las personas con movilidad reducida, este le puede servir incluso a las personas que no tengan discapacidad alguna ya que no va por una tarea objetivo espec\'ifica, sino por las actividades que realice la persona de forma frecuente sin importar cuales sean. Con esto en mente, se logr\'o obtener 4 archivos con la lista de acciones que realizaron 4 individuos sin discapacidades en sus actividades cotidianas en una computadora.
 
 
-En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad de tiempo el cual se muestra en la segunda columna tabla []. Como ya se explicó anteriormente en el capítulo [4] una acción realizada por el usuario genera un nodo, esta cantidad es mostrada en la columna 3, mientras que la columna 4 es el numero máximo de veces que se repitió un nodo y para mantener el anonimato de las personas participantes en esta prueba, se les hará referencia por un numero de ahora en adelante como se muestra en la primer columna. 
-
-No. de sujeto	&      tiempo de uso (hr:min)	&	número de nodos	&      Repeticiones
-1		&	166:23 			&	1494792		&	46036
-2		&	490:24			&	1333016		&	116001
-3		&	1060:48		&	1448016		&	378541
-4		&	148:23			&	972828			&	56606
-
-A la cada lista de acciones se le aplico el algoritmo explicado en el capítulo 4 y como se muestra en la figura 4.4 se utilizó un factor de 70 incidencias por nodo para ser candidato para formar una secuencia y un mínimo de 5 repeticiones por secuencia para declarar que la tarea es útil. 
-Las secuencias de acciones que empieza con la acción emph{Release} fueron descartadas, ya que esta acción implica que se quedó presionada una tecla o botón específico, también se rechazaron las secuencias que terminen con la acción emph{Pressed} ya que esto dejaría presionada la tecla o botón hasta que se presione físicamente o se llame la acción emph{Release} , las demás tareas son las que se consideran como válidas. Por el hecho de que este es un método cuyo aprendizaje es acumulativo, así sea que la primera secuencia sea del agrado del usuario o no, la siguiente secuencia puede contener la primera con alguna acción adicional y es probable que esta variante ya sea de utilidad al usuario, como filtro adicional se limitó a obtener secuencias de acciones con longitudes en múltiplos de 2, considerando que una tecla o botón presionado debe de ser liberado para concluir la acción. Con lo anterior como justificación es que se llegó a la siguiente tabla de resultados.
-
-No. de sujeto	&	secuencias aceptadas	&      secuencias rechazadas 
-1		&	177			&	88
-2		&	165			&	92
-3		&	167			&	92
-4		&	64			&	38
+En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad de tiempo el cual se muestra en la segunda columna de la tabla \ref{infodata}. Como ya se explic\'o anteriormente en el cap\'itulo \ref{sec:chapter4} una acci\'on realizada por el usuario genera un nodo, esta cantidad es mostrada en la columna 3, mientras que la columna 4 es el numero m\'aximo de veces que se repiti\'o un nodo y para mantener el anonimato de las personas participantes en esta prueba, se les har\'a referencia por un numero de ahora en adelante como se muestra en la primer columna. 
 
 
+\begin{table}[]
+\centering
+\begin{tabular}{cccc}
+\hline
+		No. de Sujeto	&   Tiempo de Uso (Hr:Min)		&	N\'umero de Nodos	&   Repeticiones 	\\   \hline
+		1				&	166:23 						&	1,494,792			&	46,036				\\
+		2				&	490:24						&	1,333,016			&	116,001				\\
+		3				&	1060:48						&	1,448,016			&	378,541				\\
+		4				&	148:23						&	972,828				&	56,606				\\ 
+\hline
+\end{tabular}
+\caption{Informaci\'on de los datos recabados}
+\label{infodata}
+\end{table}
+
+A la cada lista de acciones se le aplico el algoritmo explicado en el cap\'itulo \ref{sec:chapter4} y como se muestra en la figura \ref{fig:conc02} se utiliz\'o un factor de 70 incidencias por nodo para ser candidato para formar una secuencia y un m\'inimo de 5 repeticiones por secuencia para declarar que la tarea es \'util. 
+
+
+Las secuencias de acciones que empieza con la acci\'on \emph{Release} fueron descartadas, ya que esta acci\'on implica que se qued\'o presionada una tecla o bot\'on espec\'ifico, tambi\'en se rechazaron las secuencias que terminen con la acci\'on \emph{Pressed} ya que esto dejar\'ia presionada la tecla o bot\'on hasta que se presione f\'isicamente o se llame la acci\'on \emph{Release}, las dem\'as tareas son las que se consideran como v\'alidas, como filtro adicional se limit\'o a obtener secuencias de acciones con longitudes en m\'ultiplos de 2, considerando que una tecla o bot\'on presionado debe de ser liberado para concluir la acci\'on.
+
+Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea que la primera secuencia sea del agrado del usuario o no, la siguiente secuencia puede contener la primera con alguna acci\'on adicional y es mas probable que esta variante ya sea de utilidad al usuario. Por lo mencionado anteriormente es que se lleg\'o a los resultados de la tabla \ref{tableRes}, en la cual se muestra la cantidad de secuencias aceptadas, rechazadas de acuerdo con los criterios mencionados anteriormente y el procentaje de correspondiente a las secuencias aceptadas respecto al total encontrado.
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{cccc}
+\hline
+		No. de Sujeto	&	Secuencias Aceptadas	&   Secuencias Rechazadas	&	Eficiencia		\\ \hline
+		1				&	177						&	88						&	66.79 \%		\\
+		2				&	165						&	92						&	64.20 \%		\\
+		3				&	167						&	92						&	64.47 \%		\\
+		4				&	64						&	38						&	62.74 \%		\\
+\hline
+\end{tabular}
+\caption{Resultados de las pruebas realizadas}
+\label{tableRes}
+\end{table}
+
+\subsection{Discusi\'{o}n de resultados}
+
+Los resultados experimentales demuestran que el software desarrollado va a proporcionar mayormente tareas para automatizar validas considerando estos criterios independientemente del software que este usando la persona.
+Un ejemplo de las tareas encontradas por el software son las siguientes:
+
+Sujeto: 1	\\
+Tarea: 128	\\
+Descripci\'on: La tarea es utilizada en el software Blender para girar el objeto en el eje Z y posteriormente X.	\\
+Secuencia obtenida:\\
+Keyboard,Pressed,g\\
+Keyboard,Release,g\\
+Keyboard,Pressed,z\\
+Keyboard,Release,z\\
+Keyboard,Pressed,x\\
+Keyboard,Release,x\\
+
+Sujeto: 2	\\
+Tarea: 19	\\
+Descripci\'on: En Windows es utilizada esta combinaci\'on de teclas para cambiar entre las ventanas abiertas.	\\
+Secuencia obtenida:\\
+Keyboard,Pressed,Key.alt\_l	\\
+Keyboard,Pressed,Key.tab	\\
+Keyboard,Release,Key.tab	\\
+Keyboard,Release,Key.alt\_l	\\
+
+Sujeto: 3	\\
+Tarea: 132	\\
+Descripci\'on: es la palabra ``que'' seguida de un espacio en blanco.	\\
+Secuencia obtenida:\\
+Keyboard,Pressed,q	\\
+Keyboard,Release,q	\\
+Keyboard,Pressed,u	\\
+Keyboard,Release,u	\\
+Keyboard,Pressed,e	\\
+Keyboard,Release,e	\\
+Keyboard,Pressed,Key.space	\\
+Keyboard,Release,Key.space	\\
+
+Sujeto: 4	\\
+Tarea: 26	\\
+Descripci\'on: En Windows, selecciona el objeto se\~nalado por el puntero y obtiene el men\'u contextual de ese objeto.	\\
+Secuencia obtenida:\\	
+Mouse,Pressed,Button.left	\\
+Mouse,Released,Button.left	\\
+Mouse,Pressed,Button.right	\\
+Mouse,Released,Button.right	\\
 
 
 
 
 
-%\abstract{
-Los algoritmos de ...
+
+
+\begin{comment}
 
 \subsection{Introducci\'{o}n}
 \label{sec:1}
@@ -106,3 +176,4 @@ En este trabajo se presento ...
 Las pruebas de desempeno indican que ...\\
 
 % ********** End of chapter **********
+\end{comment}
