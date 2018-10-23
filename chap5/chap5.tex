@@ -2,155 +2,21 @@
 \chapter{Experimentos y resultados}
 \label{sec:chapter5}
 
-En el presente capitulo se describe el conjunto e experimentos a realizar para evaluar la propuesta planteada ante la problem\'atica de la discapacidad que presentan las personas con problemas de movilidad en los brazos o manos.
+En el presente capitulo se describe el conjunto de experimentos realizados para evaluar la propuesta planteada ante la problem\'atica de la discapacidad que presentan las personas con problemas de movilidad en los brazos o manos.
 
 
 \section{Introducci\'on}
 
-Los algoritmos mostrados en el cap\'itulo \ref{sec:1} proponen formas de automatizar actividades realizadas por una persona, seria posible implementar ese tipo de soluci\'on al problema en cuesti\'on, pero esto representar\'ia un problema aun mayor, dado que se tendr\'ia que conocer las actividades que realiza el usuario del equipo para poder proponer la automatizaci\'on de estas. 
+Los algoritmos mostrados en el cap\'itulo \ref{sec:chapter1} proponen formas de automatizar actividades realizadas por una persona, ser\'ia posible implementar ese tipo de soluci\'on al problema en cuesti\'on, pero esto, representar\'ia un problema a\'un mayor, dado que se tendr\'ia que conocer las actividades que realiza el usuario del equipo para poder proponer la automatizaci\'on de \'estas. 
 
 
 La propuesta planteada en este escrito propone un aprendizaje progresivo, discriminando las acciones menos frecuentes realizadas por el usuario y descartando por completo aquellas que ni se realizan. 
 
+\input{chap5/ExperimentosYResultados.tex}
 
-\subsection{Experimentos y resultados}
-
-El uso del software no se ve limitado a las personas con movilidad reducida, este le puede servir incluso a las personas que no tengan discapacidad alguna ya que no va por una tarea objetivo espec\'ifica, sino por las actividades que realice la persona de forma frecuente sin importar cuales sean. Con esto en mente, se logr\'o obtener 4 archivos con la lista de acciones que realizaron 4 individuos sin discapacidades en sus actividades cotidianas en una computadora.
-
-
-En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad de tiempo el cual se muestra en la segunda columna de la tabla \ref{infodata}. Como ya se explic\'o anteriormente en el cap\'itulo \ref{sec:chapter4} una acci\'on realizada por el usuario genera un nodo, esta cantidad es mostrada en la columna 3, mientras que la columna 4 es el numero m\'aximo de veces que se repiti\'o un nodo y para mantener el anonimato de las personas participantes en esta prueba, se les har\'a referencia por un numero de ahora en adelante como se muestra en la primer columna. 
-
-
-\begin{table}[]
-\centering
-\begin{tabular}{cccc}
-\hline
-		No. de Sujeto	&   Tiempo de Uso (Hr:Min)		&	N\'umero de Nodos	&   Repeticiones 	\\   \hline
-		1				&	166:23 						&	1,494,792			&	46,036				\\
-		2				&	490:24						&	1,333,016			&	116,001				\\
-		3				&	1060:48						&	1,448,016			&	378,541				\\
-		4				&	148:23						&	972,828				&	56,606				\\ 
-\hline
-\end{tabular}
-\caption{Informaci\'on de los datos recabados}
-\label{infodata}
-\end{table}
-
-A la cada lista de acciones se le aplico el algoritmo explicado en el cap\'itulo \ref{sec:chapter4} y como se muestra en la figura \ref{fig:conc02} se utiliz\'o un factor de 70 incidencias por nodo para ser candidato para formar una secuencia y un m\'inimo de 5 repeticiones por secuencia para declarar que la tarea es \'util. 
-
-
-Las secuencias de acciones que empieza con la acci\'on \emph{Release} fueron descartadas, ya que esta acci\'on implica que se qued\'o presionada una tecla o bot\'on espec\'ifico, tambi\'en se rechazaron las secuencias que terminen con la acci\'on \emph{Pressed} ya que esto dejar\'ia presionada la tecla o bot\'on hasta que se presione f\'isicamente o se llame la acci\'on \emph{Release}, las dem\'as tareas son las que se consideran como v\'alidas, como filtro adicional se limit\'o a obtener secuencias de acciones con longitudes en m\'ultiplos de 2, considerando que una tecla o bot\'on presionado debe de ser liberado para concluir la acci\'on.
-
-Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea que la primera secuencia sea del agrado del usuario o no, la siguiente secuencia puede contener la primera con alguna acci\'on adicional y es mas probable que esta variante ya sea de utilidad al usuario. Por lo mencionado anteriormente es que se lleg\'o a los resultados de la tabla \ref{tableRes}, en la cual se muestra la cantidad de secuencias aceptadas, rechazadas de acuerdo con los criterios mencionados anteriormente y el procentaje de correspondiente a las secuencias aceptadas respecto al total encontrado.
-
-
-\begin{table}[]
-\centering
-\begin{tabular}{cccc}
-\hline
-		No. de Sujeto	&	Secuencias Aceptadas	&   Secuencias Rechazadas	&	Eficiencia		\\ \hline
-		1				&	177						&	88						&	66.79 \%		\\
-		2				&	165						&	92						&	64.20 \%		\\
-		3				&	167						&	92						&	64.47 \%		\\
-		4				&	64						&	38						&	62.74 \%		\\
-\hline
-\end{tabular}
-\caption{Resultados de las pruebas realizadas}
-\label{tableRes}
-\end{table}
-
-\subsection{Discusi\'{o}n de resultados}
-
-Los resultados experimentales demuestran que el software desarrollado va a proporcionar mayormente tareas para automatizar validas considerando estos criterios independientemente del software que este usando la persona.
-Un ejemplo de las tareas encontradas por el software son las siguientes:
-
-Sujeto: 1	\\
-Tarea: 128	\\
-Descripci\'on: La tarea es utilizada en el software Blender para girar el objeto en el eje Z y posteriormente X.	\\
-Secuencia obtenida:\\
-Keyboard,Pressed,g\\
-Keyboard,Release,g\\
-Keyboard,Pressed,z\\
-Keyboard,Release,z\\
-Keyboard,Pressed,x\\
-Keyboard,Release,x\\
-
-Sujeto: 2	\\
-Tarea: 19	\\
-Descripci\'on: En Windows es utilizada esta combinaci\'on de teclas para cambiar entre las ventanas abiertas.	\\
-Secuencia obtenida:\\
-Keyboard,Pressed,Key.alt\_l	\\
-Keyboard,Pressed,Key.tab	\\
-Keyboard,Release,Key.tab	\\
-Keyboard,Release,Key.alt\_l	\\
-
-Sujeto: 3	\\
-Tarea: 132	\\
-Descripci\'on: es la palabra ``que'' seguida de un espacio en blanco.	\\
-Secuencia obtenida:\\
-Keyboard,Pressed,q	\\
-Keyboard,Release,q	\\
-Keyboard,Pressed,u	\\
-Keyboard,Release,u	\\
-Keyboard,Pressed,e	\\
-Keyboard,Release,e	\\
-Keyboard,Pressed,Key.space	\\
-Keyboard,Release,Key.space	\\
-
-Sujeto: 4	\\
-Tarea: 26	\\
-Descripci\'on: En Windows, selecciona el objeto se\~nalado por el puntero y obtiene el men\'u contextual de ese objeto.	\\
-Secuencia obtenida:\\	
-Mouse,Pressed,Button.left	\\
-Mouse,Released,Button.left	\\
-Mouse,Pressed,Button.right	\\
-Mouse,Released,Button.right	\\
-
-
-
-
-
-
+\input{chap5/Discucion.tex}
 
 \begin{comment}
-
-\subsection{Introducci\'{o}n}
-\label{sec:1}
-Las tecnicas de ...\\
-
-Recientemente se considero ... \\
-
-En este trabajo se presentan las principales consideraciones de implantacionde ... 
- 
-
-
-\subsection{Experimentos y resultados}
-\subsubsection{M\'{e}tricas para ...}
-Para evaluar el desempeno de ...
-\begin{itemize}
-\item Costo computacional
-\item Rapidez
-\item Ventaja (speedup)
-\item Eficiencia 
-\end{itemize}
-El costo computacional, $C$, lo definimos ...
-\begin{equation}
-V =\frac{1}{C}
-\label{eq:06}
-\end{equation}
-La ventaja (speedup) es la tasa que resulta de dividir la rapidez de la variante de interes  entre la rapidez de la variante de referencia (por ejemplo, la variante secuencial).
-\begin{equation}
-S =\frac{V_{obj}}{V_{ref}}
-\label{eq:06}
-\end{equation}
-Finalmente...  
-
-
-\subsection{Desarrollo experimental}
-Las pruebas se realizaron en el sistema mencionado en la seccion \ref{sim:sist}.
-
-Se llevaron a cabo una serie de experimentos para ...
-
 
 \subsection{Discusi\'{o}n de resultados}
 
