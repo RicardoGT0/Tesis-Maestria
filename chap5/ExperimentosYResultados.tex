@@ -1,0 +1,98 @@
+\subsection{Experimentos y resultados}
+
+El uso del software no se ve limitado a las personas con movilidad reducida, este le puede servir incluso a las personas que no tengan discapacidad alguna, ya que no va por una tarea objetivo espec\'ifica, sino por las actividades que realice la persona de forma frecuente sin importar cuales sean. Con esto en mente, se logr\'o obtener 4 archivos con la lista de acciones que realizaron 4 individuos sin discapacidades en sus actividades cotidianas en una computadora.
+
+
+En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad de tiempo el cual se muestra en la segunda columna de la tabla \ref{infodata}. Como ya se explic\'o anteriormente en el cap\'itulo \ref{sec:chapter4} una acci\'on realizada por el usuario genera un nodo, esta cantidad es mostrada en la columna 3, mientras que la columna 4 es el numero m\'aximo de veces que se repiti\'o un nodo y para mantener el anonimato de las personas participantes en esta prueba, se les har\'a referencia por un numero de ahora en adelante como se muestra en la primer columna. 
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{cccc}
+\hline
+		No. de Sujeto	&   Tiempo de Uso (Hr:Min)		&	N\'umero de Nodos	&   Repeticiones 	\\   \hline
+		1				&	166:23 						&	1,494,792			&	46,036				\\
+		2				&	490:24						&	1,333,016			&	116,001				\\
+		3				&	1060:48						&	1,448,016			&	378,541				\\
+		4				&	148:23						&	972,828				&	56,606				\\ 
+\hline
+\end{tabular}
+\caption{Informaci\'on de los datos recabados}
+\label{infodata}
+\end{table}
+
+A la cada lista de acciones se le aplico el algoritmo explicado en el cap\'itulo \ref{sec:chapter4} y como se muestra en la figura \ref{fig:conc02} se utiliz\'o un factor de 70 incidencias por nodo para ser candidato para formar una secuencia y un m\'inimo de 5 repeticiones por secuencia para declarar que la tarea es \'util. 
+
+
+Las secuencias de acciones que empieza con la acci\'on \emph{Release} fueron descartadas, ya que esta acci\'on implica que se qued\'o presionada una tecla o bot\'on espec\'ifico, tambi\'en se rechazaron las secuencias que terminen con la acci\'on \emph{Pressed} ya que esto dejar\'ia presionada la tecla o bot\'on hasta que se presione f\'isicamente o se llame la acci\'on \emph{Release}, las dem\'as tareas son las que se consideran como v\'alidas, como filtro adicional se limit\'o a obtener secuencias de acciones con longitudes en m\'ultiplos de 2, considerando que una tecla o bot\'on presionado debe de ser liberado para concluir la acci\'on, sin embargo, pese a esta limitante las secuencias a obtener naturalmente son; desde 1 acci\'on (tabla \ref{tableRes1}) y desde 2 acciones (tabla \ref{tableRes2}). En ambas tablas mencionadas se muestra la cantidad de secuencias aceptadas, rechazadas de acuerdo con los criterios mencionados anteriormente y el procentaje correspondiente a las secuencias aceptadas respecto al total encontrado.
+
+Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea que la primera secuencia sea del agrado del usuario o no, la siguiente secuencia puede contener la primera con alguna acci\'on adicional y es mas probable que esta variante ya sea de utilidad al usuario. 
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{cccc}
+\hline
+		No. de Sujeto	&	Secuencias Aceptadas	&   Secuencias Rechazadas	&	Acertividad		\\ \hline
+		1				&	189						&	336						&	36.00 \%		\\
+		2				&	165						&	322						&	33.88 \%		\\
+		3				&	151						&	316						&	32.33 \%		\\
+		4				&	56						&	124						&	31.11 \%		\\
+\hline
+\end{tabular}
+\caption{Tabla de resultados con secuencias de una longitud m\'inima de 1 acci\'on}
+\label{tableRes1}
+\end{table}
+
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{cccc}
+\hline
+		No. de Sujeto	&	Secuencias Aceptadas	&   Secuencias Rechazadas	&	Acertividad		\\ \hline
+		1				&	179						&	231						&	43.65 \%		\\
+		2				&	170						&	207						&	45.09 \%		\\
+		3				&	154						&	192						&	44.50 \%		\\
+		4				&	52						&	67						&	43.69 \%		\\
+\hline
+\end{tabular}
+\caption{Tabla de resultados con secuencias de una longitud m\'inima de 2 acciones}
+\label{tableRes2}
+\end{table}
+
+
+Un ejemplo de las tareas encontradas por el software son las siguientes:
+\\
+\\
+Sujeto: 1	\\
+Descripci\'on: La tarea es utilizada en el software Blender para girar el objeto en el eje Y.	\\
+Secuencia obtenida:\\
+Keyboard,Pressed,G\\
+Keyboard,Release,G\\
+Keyboard,Pressed,Y\\
+Keyboard,Release,Y\\
+\\
+Sujeto: 2	\\
+Descripci\'on: En Windows es utilizada esta combinaci\'on de teclas para cambiar entre las ventanas abiertas.	\\
+Secuencia obtenida:\\
+Keyboard,Pressed,Key.alt\_l	\\
+Keyboard,Pressed,Key.tab	\\
+Keyboard,Release,Key.tab	\\
+Keyboard,Release,Key.alt\_l	\\
+\\
+Sujeto: 3	\\
+Descripci\'on: es la palabra ``el''.	\\
+Secuencia obtenida:\\
+Keyboard,Pressed,e	\\
+Keyboard,Release,e	\\
+Keyboard,Pressed,l	\\
+Keyboard,Release,l	\\
+\\
+Sujeto: 4	\\
+Descripci\'on: En Windows, selecciona el objeto se\~nalado por el puntero y obtiene el men\'u contextual de ese objeto.	\\
+Secuencia obtenida:\\	
+Mouse,Pressed,Button.left	\\
+Mouse,Released,Button.left	\\
+Mouse,Pressed,Button.right	\\
+Mouse,Released,Button.right	\\
