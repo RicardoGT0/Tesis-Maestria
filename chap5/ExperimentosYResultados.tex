@@ -5,6 +5,8 @@ El uso del software no se ve limitado a las personas con movilidad reducida, est
 
 En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad de tiempo el cual se muestra en la segunda columna de la tabla \ref{infodata}. Como ya se explic\'o anteriormente en el cap\'itulo \ref{sec:chapter4} una acci\'on realizada por el usuario genera un nodo, esta cantidad es mostrada en la columna 3, mientras que la columna 4 es el n\'umero m\'aximo de veces que se repiti\'o un nodo y para mantener el anonimato de las personas participantes en esta prueba, se les har\'a referencia por un n\'umero de ahora en adelante como se muestra en la primer columna. 
 
+Se observa en la tabla \ref{infodata} que el sujeto n\'umero 3 es el que tiene el mayor tiempo de uso con poco mas de 1060 horas, con 1,448,016 nodos generados y 378,541 veces que se repiti\'o un nodo como m\'aximo; mientras que el sujeto n\'umero 1 con 1,494,792 nodos, es el que obtuvo mayor cantidad de nodos reportados en 166 horas y 23 minutos con 46,036 repeticiones de un nodo. Finalmente, el sujeto 4 tiene el menor tiempo con 148 horas y 23 minutos, con 972,828 nodos y 56,606 repeticiones reportadas.
+
 
 \begin{table}[]
 \centering
@@ -25,6 +27,10 @@ A cada lista de acciones se le aplico el algoritmo explicado en el cap\'itulo \r
 
 
 Las secuencias de acciones que empieza con la acci\'on \emph{Release} fueron descartadas, ya que esta acci\'on implica que se qued\'o presionada una tecla o bot\'on espec\'ifico, tambi\'en se rechazaron las secuencias que terminen con la acci\'on \emph{Pressed} ya que esto dejar\'ia presionada la tecla o bot\'on hasta que se presione f\'isicamente o se llame la acci\'on \emph{Release}, las dem\'as tareas son las que se consideran como v\'alidas, como filtro adicional se limit\'o a obtener secuencias de acciones con longitudes en m\'ultiplos de 2, considerando que una tecla o bot\'on presionado debe de ser liberado para concluir la acci\'on, sin embargo, pese a esta limitante las secuencias a obtener naturalmente son; desde 1 acci\'on (tabla \ref{tableRes1}) y desde 2 acciones (tabla \ref{tableRes2}). En ambas tablas mencionadas se muestra la cantidad de secuencias aceptadas, rechazadas de acuerdo con los criterios mencionados anteriormente y el procentaje correspondiente a las secuencias aceptadas respecto al total encontrado.
+
+
+En la tabla \ref{tableRes1} cabe destacar que el sujeto 1 es al que se le detectaron mayor numero de secuencias y as\'i mismo es el que tiene mayor n\'umero de secuencias aceptadas con el 36\% de asertividad; el sujeto 3 y 4 son los que obtuvieron menos secuencias aceptadas y un menor porcentaje de asertividad con un 32.33\% y 31.11\% respectivamente. Y en al tabla \ref{tableRes2} se observa que el sujeto 1 es el que tiene mayor n\'umero de secuencias aceptadas, sin embargo, es el que tiene el menor porcentaje de asertividad con el 43.65\%, mientras que el sujeto n\'umero 2 es el que tiene la mayor asertividad con el 45.09\%.
+
 
 Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea que la primera secuencia sea del agrado del usuario o no, la siguiente secuencia puede contener la primera con alguna acci\'on adicional y es mas probable que esta variante ya sea de utilidad al usuario. 
 
