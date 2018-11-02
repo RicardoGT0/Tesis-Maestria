@@ -1,13 +1,22 @@
 \subsection{Discusi\'{o}n de resultados}
 
 
-Los resultados experimentales demuestran que el software desarrollado es capaz de proporcionar tareas \'utiles para la automatizaci\'on de las mismas, independientemente del software que este usando la persona.
+Los resultados experimentales demuestran que el software desarrollado es capaz
+ de proporcionar tareas \'utiles para la automatizaci\'on de las mismas,
+ independientemente del software que este usando la persona, de forma que en 
+ una lista pseudo--infinita de datos ordenados por momento de aparici\'on es
+ posible encontrar secuencias de informaci\'on coherente para el usuario.
 
 
-Considerando que los criterios mencionados son para darle un uso espec\'ifico al grafo, es destacable que pese al entorno variable en el cual fue evaluado el software, solo fue necesario asignar unas pocas condiciones generales para obtener las secuencias deseadas. 
+Considerando que los criterios mencionados son para darle un uso espec\'ifico
+ al grafo, es destacable que pese al entorno variable en el cual fue evaluado
+ el software, como ya se menciono, solo fue necesario asignar unas pocas
+ condiciones generales para obtener las secuencias coherentes.
 
 
-Entre las secuencias rechazadas se pueden localizar tareas que tienen la longitud de una acci\'on, las cuales es posible que para alg\'un usuario sean de utilidad, se presenta la siguiente lista a modo de ejemplo.
+Entre las secuencias rechazadas se pueden localizar tareas que tienen la
+ longitud de una acci\'on, las cuales es posible que para alg\'un usuario sean
+ de utilidad, se presenta la siguiente lista a modo de ejemplo.
 \\
 \\
 Secuencia 1:\\
@@ -16,13 +25,59 @@ Mouse,Scrolled,Down\\
 Secuencia 2:\\
 Mouse,Scrolled,Up\\
 
-Cabe recordar que la principal intenci\'on de este software es el apoyar a las personas con discapacidad en brazos y manos, teniendo en cuenta esto, las secuencias mostradas pueden ser de utilidad a alguna persona, sin embargo, considerando que la secuencia m\'as \'util es la que contiene mas elementos estas acciones unitarias fueron descartadas. Adicionalmente, si se piensa en alg\'un otro uso para el algoritmo, aparte de la automatizaci\'on de las tareas realizadas en una computadora, es posible que las acciones unitarias e impares tengan importancia, por lo que la asertividad mostradas en las tablas \ref{tableRes1} y \ref{tableRes2}, puede variar dependiendo del caso de uso.
+Cabe recordar que la principal intenci\'on de este software es el apoyar a las
+ personas con discapacidad en brazos y manos, teniendo en cuenta esto, las
+ secuencias mostradas pueden ser de utilidad a alguna persona, sin embargo,
+ considerando que la secuencia m\'as \'util es la que contiene mas elementos
+ estas acciones unitarias fueron descartadas. Adicionalmente, si se piensa en
+ alg\'un otro uso para el algoritmo, aparte de la automatizaci\'on de las
+ tareas realizadas en una computadora, es posible que las acciones de longitud
+ unitaria e impares tengan importancia, por lo que la asertividad mostradas en
+ las tablas \ref{tableRes1} y \ref{tableRes2}, puede variar dependiendo del
+ caso de uso.
+
+La lista de tareas obtenida se puede ver incrementada con el uso de estas, por 
+ el hecho de que, al hacer uso de las tareas guardadas, el usuario le indica a 
+ la maquina que tarea realizar, en lugar de hacerla \'el mismo, est\'e es otro 
+ aspecto para destacar ya que solo se crean las secuencias, no se ejecutan 
+ automaticamente, si se desea ejecutar alguna tarea guardada, el usuario es el 
+ que debe ejecutarla manualmente. En el caso dado de que se desee implementar 
+ una t\'ecnica de inteligencia artificial para que la ejecuci\'on de estas 
+ tareas se realice de forma autom\'atica, ser\'ia posible o incluso, el 
+ utilizar esta metodolog\'ia para la obtenci\'on de pol\'iticas para RL o 
+ aprendizaje por demostraci\'on.
 
 
-Otro aspecto para destacar es que solo se crean las secuencias, si se desea ejecutar alguna tarea guardada, el usuario es el que debe ejecutarla manualmente. En el caso dado de que se desee implementar una t\'ecnica de inteligencia artificial para que la ejecuci\'on de estas tareas se realice de forma autom\'atica, ser\'ia posible o incluso, el utilizar esta metodolog\'ia para la obtenci\'on de pol\'iticas para RL o aprendizaje por demostraci\'on.
+El software desarrollado tiene mucha similitud con un creador de macros, por 
+ ejemplo, Pulovers Macro Creator, las diferencias que hay que destacar se 
+ mencionan en la tabla \ref{vsmacros}, en la que se realiza una comparativa de 
+ forma general entre ambos desarrollos.
+ 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{m{6cm}|m{6cm}}
+\hline
+Creador de macros 	&	Software desarrollado \\
+\hline
+Hay que indicar manualmente cuando empieza y termina la acci\'on deseada	
+ &	
+Se muestra al usuario las acciones que realiza con mayor frecuencia para que
+  el decida cual guardar\\
+\hline
+
+El usuario graba manualmente la tarea que desea automatizar	
+ &
+La tarea mostrada no siempre es lo requerido por el usuario\\
+\hline
+
+El usuario requiere conocimiento del software para crear tareas complejas 	
+ &
+El usuario no requiere editar las tareas\\
+\hline
+\end{tabular}
+\caption{Comparativa del software con un generador de macros}
+\label{vsmacros}
+\end{table}
 
 
-La lista de tareas obtenida se puede ver incrementada con el uso de estas, por el hecho de que, al hacer uso de las tareas guardadas, el usuario le indica a la maquina que tarea realizar, en lugar de hacerla \'el mismo. 
-
-
-Es posible hacer mejoras al software, por ejemplo, en lugar de que se tenga que hacer clic en una ventana para realizar la tarea, seria de mayor ayuda a un discapacitado hacer uso de otro dispositivo de entrada como ser\'ia el caso de un micr\'ofono, permitiendo que se guarden y ejecuten las secuencias por medio de comandos de voz. 
