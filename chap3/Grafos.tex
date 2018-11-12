@@ -6,7 +6,16 @@ Un grafo consiste en dos conjuntos finitos: un conjunto no vac\'io de
  Se dice que una arista incide sobre cada uno de sus puntos extremos, 
  dos aristas que inciden en el mismo punto se llaman adyacentes y el 
  v\'ertice en el que no incide ninguna arista se llama 
- aislado\cite{SUSANNAS.EPP2012}.
+ aislado\cite{SUSANNAS.EPP2012}, En la figura \ref{fig:igrafo} se
+ presenta un grafo que muestra las acciones dosponibles con el 
+ teclado y rat\'on.
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{chap3/Imagenes/Grafo.eps}
+\caption{Ejemplo de un grafo.}
+\label{fig:igrafo}
+\end{figure}
 
 
 \subsection{Grafo Dirigido}
@@ -20,7 +29,18 @@ Un grafo dirigido se define por ser un grafo donde cada arista es un
  referencia al siguiente se puede acceder a todos los elementos de la lista, 
  la ventaja ofrecida es la posibilidad de crear una lista de dimensi\'on 
  variable, por lo que es usada cuando se desconoce la cantidad total de 
- elementos a introducir\cite{deitel2008java}.
+ elementos a introducir\cite{deitel2008java}, otro ejemplo ser\'ia un 
+ aut\'omata finito determinista como el presentado en la imagen
+ \ref{fig:igrafoD}, en el cual se puede apreciar la diferencia con el grafo 
+ por mostrar la direcci\'on de las aristas con una flecha, en lugar de usar 
+ solo una recta.
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{chap3/Imagenes/GrafoDirigido.eps}
+\caption{Ejemplo de un grafo dirigido.}
+\label{fig:igrafoD}
+\end{figure}
 
 
 \subsection{Teor\'ia de \'arboles}
@@ -36,6 +56,7 @@ En t\'erminos matem\'aticos un \'arbol es un grafo $T$ el cual se puede definir 
 	 un v\'ertice de rama).''
 \end{itemize}
 
+
 Los \'arboles son muy usados en la actualidad ya que permiten  darle sentido a
  la informaci\'on contenida, gracias a la asociatividad, parentizaci\'on y
  prioridad que este permite de manera impl\'icita. Entre sus usos m\'ultiples en
@@ -47,7 +68,16 @@ Una forma de ver a un \'arbol puede ser como un solo nodo, est\'e recibe el nomb
  de  nodo ra\'iz, al cual se le puede enraizar un sinf\'in de \'arboles lo que da
  origen  a un \'arbol con otras caracter\'isticas, dependiendo del resultado se le
  puede clasificar en alguno de los modelos existentes, por ejemplo; \'arbol 
- general o \'arbol binario\cite{gutierrez1999estructuras}. 
+ general o \'arbol binario\cite{gutierrez1999estructuras},el mostrado en la figura
+ \ref{fig:iarbol}, es un \'arbol binario que representa la jerarqu\'ia e 
+ interconexi\'on entre varios procesadores. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{chap3/Imagenes/Arbol.eps}
+\caption{Ejemplo de un \'arbol.}
+\label{fig:iarbol}
+\end{figure}
 
 El \'arbol general es un modelo con una cantidad indeterminada de nodos hijos,
  mientras que el \'arbol binario es un caso particular del \'arbol general ya que
