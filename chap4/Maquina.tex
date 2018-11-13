@@ -1,18 +1,18 @@
 Un primer acercamiento a esta metodolog\'ia ser\'ia con una m\'aquina de 
  Turing que tiene por configuraci\'on inicial una cinta infinita
  con la entrada e infinitas cintas auxiliares vac\'ias, al leer
- un car\'acter en la cita de entrada se copia est\'e a la primer 
+ un car\'acter en la cinta de entrada se copia dicho caracter a la primer 
  cinta auxiliar avanzando de posici\'on tanto en la cinta de entrada como 
- en est\'a primer cinta, posteriormente le lee el siguiente car\'acter y 
- nuevamente se copia en est\'a primer cinta, se prosigue de la misma forma 
- hasta encontrar alg\'un car\'acter que ya exista en la cinta auxiliar, en 
- este caso, se verifica si este car\'acter es el primer car\'acter de la cinta
+ en la cinta auxiliar, posteriormente se lee el siguiente car\'acter y 
+ nuevamente se copia en esta primer cinta; se prosigue de la misma forma 
+ hasta encontrar alg\'un car\'acter existente en la cinta auxiliar, en 
+ este caso, se verifica si este car\'acter es el primero de la cinta
  auxiliar, en caso de no serlo, se copia a la siguiente cinta auxiliar, 
  repitiendo el proceso de lectura de la entrada y copia en la auxiliar. 
  Para el caso de que sea el mismo car\'acter de la primer cinta auxiliar, 
- se continua la lectura de la cinta de entrada verificando que cada car\'acter 
- sea igual tanto en la cinta de entrada como en la primer cinta, si alg\'un 
- car\'acter llega a ser diferente se copiara desde el inicio hasta el 
+ se contin\'ua la lectura de la cinta de entrada verificando que cada car\'acter 
+ sea igual tanto en la cinta de entrada como en la primer cinta; si alg\'un 
+ car\'acter llega a ser diferente se copiar\'a desde el inicio hasta el 
  car\'acter actual en la siguiente cinta vac\'ia.
 
   
@@ -34,7 +34,7 @@ En la figura \ref{fig:alg01} se puede apreciar un ejemplo de la simulaci\'on de
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0\columnwidth]{chap4/Imagenes/algoritmo1.eps}
-\caption{Ejemplo del algoritmo con una m\'aquina de Turing multicinta}
+\caption{Ejemplo del algoritmo con una m\'aquina de Turing multicinta.}
 \label{fig:alg01}
 \end{figure}
  
