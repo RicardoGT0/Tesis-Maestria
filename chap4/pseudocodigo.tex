@@ -1,0 +1,190 @@
+
+A continuaci\'on se presenta el pseudo--codigo del programa desarrollado.
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+Procedimiento monitoreo
+Mientras Verdad Hacer
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+    Nodo = Capturar accion de teclado o raton
+    Si Nodo existe en grafo Entonces
+        Incrementar contador_Nodo
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+    Si no Entonces
+        Colocar Nodo en grafo
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+        Si contador_nodo > 70 Entonces
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+        
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+            Si Nodo existe en Secuencia Entonces
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+                Si Secuencia existe en Lista_secuencias Entonces
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+                    Si contador_Secuencia > 5 Entonces
+                        Escribir ``Si desea Guardar la tarea [Secuencia], escriba un nombre''
+                        Leer Respuesta
+
+\end{lstlisting}
+\end{tiny}
+\end{table}                        
+                        
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]  
+                        Si Respuesta es nombre Entonces
+                            Agregar Secuencia a Lista_Tareas
+                        Si no Entonces 
+                            Agregar Secuencia a Lista_Ignoradas
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+                    Si no Entonces
+                    Incrementar contador_Secuencia
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+                    
+                    
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+                Si no Entonces
+                    Agregar Secuencia a Lista_Secuencias
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+            
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]            
+            Borrar Secuencia
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+            
+            
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]            
+            Si no Entonces
+                Agregar nodo a Secuencia
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+		
+		
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]		
+		Si no Entonces
+            Borrar Secuencia
+Fin Mientras
+Fin Procedimiento 
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+Procedimiento Ejecucion
+Mientras Verdad Hacer
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+Escribir ``Selecciona la tarea a ejecutar''
+Leer Seleccion
+Escribir ``Ejecutar Accion seleccionada?''
+Leer Decisi\'on
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+Si Decision = ``Si'' Entonces
+	Ejecutar Seleccion
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
+
+
+\begin{table}[]
+\begin{tiny}
+\begin{lstlisting}[style=C]
+Fin Mientras
+Fin Procedimiento
+
+\end{lstlisting}
+\end{tiny}
+\end{table}
