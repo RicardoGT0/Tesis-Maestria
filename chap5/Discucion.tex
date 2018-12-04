@@ -1,33 +1,24 @@
 \subsection{Discusi\'{o}n de resultados}
 
 
-Los resultados experimentales demuestran que el software desarrollado es capaz
- de proporcionar tareas \'utiles para la automatizaci\'on de las mismas,
- independientemente del software que este usando la persona, de forma que en 
- una lista pseudo--infinita de datos ordenados por momento de aparici\'on es
- posible encontrar secuencias de informaci\'on coherente para el usuario.
-
-
+Se destaca que el sujeto \textbf{n\'umero 4} (ver tabla 
+ \ref{infodata}, \ref{tableRes1} y \ref{tableRes2}) pese a ser el que menos
+ tiempo de uso y secuencias reconocidas obtuvo, su porcentaje de asertividad
+ no var\'ia tanto con respecto al de los dem\'as sujetos, lo cual demuestra 
+ la estabilidad del algoritmo mostrado, porque, considerando los datos de la 
+ tabla \ref{infodata}, el sujeto \textbf{n\'umero 4} realiz\'o mas 
+ repeticiones que el sujeto \textbf{n\'umero 1} de la reducida cantidad de 
+ acciones realizadas, es decir, el sujeto \textbf{n\'umero 4} realiz\'o 
+ acciones similares cada vez que usaba la computadora.
+ 
+ 
 Considerando que los criterios mencionados son para darle un uso espec\'ifico
  al grafo, es destacable que pese al entorno variable en el cual fue evaluado
- el software, como ya se mencion\'o, solo fue necesario asignar unas pocas
- condiciones generales para obtener las secuencias coherentes.
- 
- 
-Tambi\'en, se destaca que el sujeto \textbf{n\'umero 4} (ver tabla 
- \ref{infodata}, \ref{tableRes1} y \ref{tableRes2}) pese a ser el que menos
- tiempo de uso y secuencias reconocidas obtuvo, su porcentaje de asertividad no
- var\'ia tanto con respecto al de los dem\'as sujetos, lo cual demuestra la 
- estabilidad del algoritmo mostrado, porque, considerando los datos de la tabla 
- \ref{infodata}, el sujeto \textbf{n\'umero 4} realiz\'o mas repeticiones que el 
- sujeto \textbf{n\'umero 1} de la reducida cantidad de acciones realizadas, es 
- decir, el sujeto \textbf{n\'umero 4} realiz\'o acciones similares cada vez que 
- usaba la computadora.
-
-
-Entre las secuencias rechazadas se pueden localizar tareas que tienen la
- longitud de una acci\'on, las cuales es posible que para alg\'un usuario sean
- de utilidad, se presenta la siguiente lista a modo de ejemplo.
+ el software, solo fue necesario asignar unas pocas
+ condiciones generales para obtener las secuencias coherentes. 
+ Entre las secuencias rechazadas se pueden localizar tareas que tienen la
+ longitud de una acci\'on, las cuales es posible que para alg\'un usuario 
+ sean de utilidad, se presenta la siguiente lista a modo de ejemplo.
 \\
 \\
 Secuencia 1:\\
@@ -36,33 +27,32 @@ Mouse,Scrolled,Down\\
 Secuencia 2:\\
 Mouse,Scrolled,Up\\
 
-Cabe recordar que la principal intenci\'on de este software es el apoyar a las
- personas con discapacidad en brazos y manos, teniendo en cuenta esto, las
- secuencias mostradas pueden ser de utilidad a alguna persona, sin embargo,
- considerando que la secuencia m\'as \'util es la que contiene mas elementos,
- estas acciones unitarias fueron descartadas. Adicionalmente, si se piensa en
- alg\'un otro uso para el algoritmo, aparte de la automatizaci\'on de las
- tareas realizadas en una computadora, es posible que las acciones de longitud
- unitaria e impares tengan importancia, por lo que la asertividad mostradas en
- las tablas \ref{tableRes1} y \ref{tableRes2}, puede variar dependiendo del
- caso de uso.
+Cabe recordar que la principal intenci\'on de este software es el apoyar a 
+ las personas con discapacidad en brazos y manos, teniendo en cuenta esto, 
+ las secuencias de longitud uno, pueden ser de utilidad a alguna persona, sin 
+ embargo, considerando que la secuencia m\'as \'util es la que contiene mas 
+ elementos, estas acciones unitarias fueron descartadas. Adicionalmente, si 
+ se piensa en alg\'un otro uso para el algoritmo, aparte de la 
+ automatizaci\'on de las tareas realizadas en una computadora, es posible que 
+ las acciones de longitud unitaria e impares tengan importancia, por lo que 
+ la asertividad mostradas en las tablas \ref{tableRes1} y \ref{tableRes2}, 
+ puede variar dependiendo del caso de uso.
 
 La lista de tareas obtenida se puede ver incrementada con el uso de estas, por 
  el hecho de que, al hacer uso de las tareas guardadas, el usuario le indica a 
  la maquina que tarea realizar, en lugar de hacerla \'el mismo, est\'e es otro 
  aspecto para destacar ya que solo se crean las secuencias, no se ejecutan 
  automaticamente, si se desea ejecutar alguna tarea guardada, el usuario es el 
- que debe ejecutarla manualmente. En el caso dado de que se desee implementar 
- una t\'ecnica de inteligencia artificial para que la ejecuci\'on de estas 
- tareas se realice de forma autom\'atica, ser\'ia posible o incluso, el 
- utilizar esta metodolog\'ia para la obtenci\'on de pol\'iticas para RL o 
- aprendizaje por demostraci\'on.
+ que debe ejecutarla manualmente.
 
 
 El software desarrollado tiene mucha similitud con un creador de macros, por 
  ejemplo, Pulovers Macro Creator, las diferencias que hay que destacar se 
  mencionan en la tabla \ref{vsmacros}, en la que se realiza un an\'alisis 
- comparativo general entre ambos desarrollos.
+ comparativo general entre ambos desarrollos. Tambi\'en, existe mucha 
+ similitud con la metodolog\'ia de RPA, por lo que en el an\'alisis 
+ comparativo entre las metodolog\'ias, presentado en la tabla \ref{vsrpa}, se 
+ presentan las diferencias destacables entre ambas.
  
 
 \begin{table}[h]
@@ -73,13 +63,13 @@ Creador de macros 	&	Software desarrollado \\
 \hline
 Hay que indicar manualmente cuando empieza y termina la acci\'on deseada	
  &	
-Se muestra al usuario las acciones que realiza con mayor frecuencia para que
-  \'el decida cual guardar\\
+Se monitorea cada acci\'on realizada por el usuario.\\
 \hline
 
 El usuario graba manualmente la tarea que desea automatizar	
  &
-La tarea mostrada no siempre es lo requerida por el usuario\\
+Se muestra al usuario las acciones que realiza con mayor frecuencia para que
+  \'el decida cual guardar\\
 \hline
 
 El usuario requiere conocimiento del software para crear tareas complejas 	
@@ -92,3 +82,39 @@ El usuario no requiere editar las tareas\\
 \end{table}
 
 
+\begin{table}[h]
+\centering
+\begin{tabular}{m{6cm}|m{6cm}}
+\hline
+Robotic Process Automation    &    Software desarrollado \\
+
+\hline
+Hay que indicar manualmente cuando empieza y termina la acci\'on deseada.
+&
+Se monitorea cada acci\'on realizada por el usuario.\\
+
+\hline
+Por medio de t\'ecnicas de reconocimiento de im\'agenes y monitoreo a los dispositivos de E/S, se determina la acci\'on realizada y el momento de ejecuci\'on. 
+&
+Por medio del an\'alisis en tiempo ejecuci\'on de un grafo dirigido se obtienen las tareas realizadas.\\
+
+\hline
+Se automatiza un proceso en espec\'ifico.
+&
+Se automatiza la tarea que m\'as realice el usuario.\\
+
+\hline
+\end{tabular}
+\caption{An\'alisis comparativo de la propuesta con Robotic Process
+ Automation.}
+\label{vsrpa}
+\end{table}
+
+
+Finalmente, la metodolog\'ia desarrollada es una forma autom\'atica de obtener 
+ secuencias, se ha observado que, para esta aplicaci\'on, los resultados son 
+ prometedores y subjetivos, ya que depende del usuario la definici\'on de las 
+ tareas que le puedan ser de utilidad, sin embargo, es posible presentar el 
+ proyecto como una forma autom\'atica de realizar la automatizaci\'on de 
+ procesos de RPA o de un creador de macros, por medio de aprendizaje 
+ autom\'atico.
