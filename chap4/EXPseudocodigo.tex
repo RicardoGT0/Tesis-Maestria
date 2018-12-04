@@ -1,0 +1,219 @@
+
+De la l\'inea 1 a la 17 se define el inicio del \emph{Procedimiento de 
+ monitoreo}, en este se leen los dispositivos de entrada, se genera el grafo 
+ y se buscan las secuencias. Este proceso, es necesario que permanezca activo 
+ desde que se enciende la computadora hasta que se apague el equipo, para 
+ capturar cada acci\'on que realice el usuario, por lo que en la l\'inea 2 se 
+ inicia un ciclo \emph{Mientras} o \emph{While} que no tiene condici\'on de 
+ paro y abarca hasta la l\'inea 16. 
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=1]
+Procedimiento monitoreo
+Mientras Verdad Hacer
+\end{lstlisting}
+\end{tiny}
+
+%\noindent
+En la l\'inea 3, se lee la acci\'on del dispositivo de entrada y esta es 
+ almacenada en forma de \emph{Nodo}.
+
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+    Nodo = Capturar accion de teclado o raton
+\end{lstlisting}
+\end{tiny}
+
+En la l\'inea 4, se verifica que exista un \emph{Nodo} con la misma 
+ informaci\'on que el \emph{Nodo} reci\'en creado en el \emph{Grafo}, en caso 
+ de ser as\'i, al \emph{Nodo} existente se le aumenta 1 al 
+ \emph{contador\_Nodo}, operaci\'on realizada en la l\'inea 5, 
+ adicionalmente, se va a empezar con una secuencia de validaciones que 
+ servir\'an para identificar una secuencia y posteriormente una tarea. 
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+    Si Nodo existe en Grafo Entonces
+        Incrementar contador_Nodo
+\end{lstlisting}
+\end{tiny}
+
+Primero, se verifica que el \emph{Nodo} se haya repetido mas de 70 veces.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+        Si contador_Nodo > 70 Entonces
+\end{lstlisting}
+\end{tiny}
+
+En el caso de ser verdadera la verificaci\'on de la l\'inea 6, se verifica 
+ que el \emph{Nodo} exista en una lista de nodos llamada \emph{Secuencia}, 
+ esta es una tarea que ha realizado el usuario.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+            Si Nodo existe en Secuencia Entonces
+\end{lstlisting}
+\end{tiny}
+
+En el caso de ser verdadera la verificaci\'on de la l\'inea 7, en la l\'inea
+ 8, se ejecuta el procedimiento \emph{Seleccion\_Tarea}, en el cual se va  
+ identificar si la \emph{Secuencia} actual es una \emph{Tarea} que le pueda 
+ ser de utilidad al usuario. 
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]         
+                Ejecutar Seleccion_Tarea
+\end{lstlisting}
+\end{tiny}
+
+Despu\'es de verificar si la secuencia es una \emph{Tarea} o no, la l\'inea
+ \emph{Borra} la \emph{Secuencia} dej\'andola sin \emph{Nodos}, para empezar a
+ procesar con otra \emph{Secuencia}.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]         
+                Borrar Secuencia
+\end{lstlisting}
+\end{tiny}
+
+La instrucci\'on 10 es el caso contrario de la verificaci\'on de la l\'inea
+ 7, por tal, en caso de que el \emph{Nodo} no se encuentre en la 
+ \emph{Secuencia}, este se agregar\'a.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]        
+            Si no Entonces
+               Agregar nodo a Secuencia
+\end{lstlisting}
+\end{tiny}
+
+La l\'inea 13 es para el caso falso de la verificaci\'on de la l\'inea 6, 
+ como el \emph{Nodo} no cumple la condici\'on de tener mas de 70 
+ repeticiones, por tal, se procesa la \emph{Secuencia} hasta el momento en
+  busca de \emph{Tareas} (l\'inea 13)y porteriormente, se \emph{Borra} la 
+  \emph{Secuencia} (l\'inea 14).
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+        Si no Entonces
+            Ejecutar Seleccion_Tarea
+            Borrar Secuencia
+\end{lstlisting}
+\end{tiny}
+
+
+En la l\'inea 15, se presenta el caso contrario de la (l\'inea 4), que el 
+ \emph{Nodo} no exista en el grafo, este se agrega (l\'inea 16) en el 
+ \emph{Grafo}, enlaz\'andolo desde el \emph{Nodo} anterior. 
+
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+    Si no Entonces
+        Agregar Nodo en Grafo
+\end{lstlisting}
+\end{tiny}
+
+
+Por ultimo; en la l\'inea 17 se encuentra el final del \emph{Mientras} que se 
+ inici\'o en la l\'inea 2, y en la l\'inea 18 est\'a el final del 
+ \emph{Procedimiento monitoreo} que se empez\'o en la l\'inea 1.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXmonitor][firstnumber=last]
+Fin Mientras
+Fin Procedimiento 
+\end{lstlisting}
+\end{tiny}
+
+
+
+
+En las l\'ineas siguientes, se presenta el pseudo--codigo del procedimiento
+ para la identificaci\'on de tareas. Empezando nuevamente por la l\'inea 1, se 
+ presenta la el inicio del mismo, el cual comprende de 14 l\'ineas. Al ser un 
+ m\'odulo del procedimiento anterior, este se trabaja con la misma 
+ \emph{Secuencia} que el anterior, por tal, en la l\'inea 2, se procede a 
+ verificar que la \emph{Secuencia} exista en la \emph{lista\_Secuencias} 
+
+\begin{tiny}
+\begin{lstlisting}[name=EXseleccion][firstnumber=1]
+Procedimiento Seleccion_Tarea
+Si Secuencia existe en lista_Secuencias Entonces
+\end{lstlisting}
+\end{tiny}
+
+Si la verificaci\'on de la l\'inea 2 es verdadera, se verifica que la 
+ \emph{Secuencia} se haya repetido mas de 5 veces, para validar que le pueda 
+ ser de utilidad al usuario, adem\'as se verifica que la \emph{secuencia} no 
+ exista en la \emph{lista\_Tareas} o en la \emph{lista\_Ignoradas}, ya que 
+ esto significar\'ia que ha sido encontrada anteriormente. 
+ En caso de que esta validaci\'on de la l\'inea 3 resulte verdadera
+ y que el usuario considere que s\'i le es \'util, en la l\'inea 4, se le
+ solicita que le asigne un nombre a la \emph{Secuencia} mostrada. 
+ Posteriormente en la l\'inea 5 se lee la \emph{Respuesta} introducida por el 
+ usuario.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXseleccion][firstnumber=last]
+    Si contador_Secuencia > 5 Y Secuencia No existe en lista_Tareas O en lista_Ignoradas Entonces
+        Escribir ``Si desea Guardar la tarea [Secuencia], escriba un nombre''
+        Leer Respuesta
+\end{lstlisting}
+\end{tiny}
+
+En caso de que la \emph{respuesta} sea un nombre para la acci\'on se ejecuta 
+ la l\'inea 7, en la que se agrega la \emph{Secuencia} a una 
+ \emph{lista\_Tareas}, que son las \emph{Tareas} a las que tiene acceso el 
+ usuario, para poder ejecutarlas. En caso contrario se prosigue con la 
+ l\'inea 4, agregando la \emph{Secuencia} a la \emph{lista\_Ignoradas}, 
+ estas son las tareas que el usuario ha decidido que no le son de utilidad y 
+ por tal no se le volver\'an a mostrar.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXseleccion][firstnumber=last]
+        Si Respuesta es nombre Entonces
+            Agregar Secuencia a lista_Tareas
+        Si no Entonces 
+            Agregar Secuencia a lista_Ignoradas
+\end{lstlisting}
+\end{tiny}
+
+En caso contrario de que la verificaci\'on de la l\'inea 3 no sea verdadera, 
+ en la l\'inea 11, se incrementa en 1 el \emph{contador\_Secuencia}, para 
+ indicar que se ha usado una vez m\'as la \emph{Secuencia}.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXseleccion][firstnumber=last]
+    Si no Entonces
+        Incrementar contador_Secuencia
+\end{lstlisting}
+\end{tiny}
+
+Para el caso de que la verificaci\'on de la l\'inea 2 sea falsa, se prosigue 
+ con la l\'inea 13, agregando la \emph{Secuencia} a la 
+ \emph{lista\_Secuencias}.
+
+\begin{tiny}
+\begin{lstlisting}[name=EXseleccion][firstnumber=last]
+Si no Entonces
+    Agregar Secuencia a Lista_Secuencias
+\end{lstlisting}
+\end{tiny}
+
+Finalmente, se presenta en la l\'inea 14, el f\'in del procedimiento
+ \emph{Seleccion\_Tarea}, en este punto se tienen tres posibilidades para la 
+ \emph{Secuencia} actual; primero, la \emph{Secuencia} puede haber sido de 
+ utilidad para el usuario, por lo que se guardo en \emph{lista\_Tareas} con el 
+ nombre asignado como referencia, el segundo caso es, que la \emph{Secuencia} 
+ no le fue de utilidad al usuario y fue almacena en \emph{lista\_Ignoradas} y 
+ en el \'ultimo caso la \emph{Secuencia} no cumpl\'ia la caracter\'istica de 
+ las 5 repeticiones y solo se queda almacenada en \emph{lista\_Secuencias}  
+
+\begin{tiny}
+\begin{lstlisting}[name=EXseleccion][firstnumber=last]
+Fin Procedimiento
+\end{lstlisting}
+\end{tiny}
