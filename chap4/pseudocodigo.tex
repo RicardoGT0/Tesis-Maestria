@@ -1,185 +1,45 @@
 
-A continuaci\'on se presenta el pseudo--codigo del programa desarrollado.
-
-
-De la l\'inea 1 a la 28 se define el inicio del \emph{Procedimiento de 
- monitoreo}, en este se leen los dispositivos de entrada, se genera el grafo 
- y se buscan las secuencias. Este proceso, es necesario que permanezca activo 
- desde que se enciende la computadora hasta que se apague el equipo, para 
- capturar cada acci\'on que realice el usuario, por lo que en la l\'inea 2 se 
- inicia un ciclo \emph{Mientras} o \emph{While} que no tiene condici\'on de 
- paro y abarca hasta la l\'inea 27. 
+A continuaci\'on se presenta el pseudo--codigo del programa desarrollado y su
+ explicaci\'on.
 
 \begin{tiny}
-\begin{lstlisting}[style=C]
-Procedimiento monitoreo
+\begin{lstlisting}[name=monitor]
+Procedimiento Monitoreo
 Mientras Verdad Hacer
-\end{lstlisting}
-\end{tiny}
-
-%\noindent
-En la l\'inea 3, se lee la acci\'on del dispositivo de entrada y esta es 
- almacenada en forma de \emph{Nodo}.
-
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
     Nodo = Capturar accion de teclado o raton
-\end{lstlisting}
-\end{tiny}
-
-En la l\'inea 4, se verifica que exista un \emph{Nodo} con la misma 
- informaci\'on que el \emph{Nodo} reci\'en creado en el \emph{Grafo}, en caso 
- de ser as\'i, al \emph{Nodo} existente se le aumenta 1 al 
- \emph{contador\_Nodo}, operaci\'on realizada en la l\'inea 5, 
- adicionalmente, se va a empezar con una secuencia de validaciones que 
- servir\'an para identificar una secuencia y posteriormente una tarea. 
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
     Si Nodo existe en Grafo Entonces
         Incrementar contador_Nodo
-\end{lstlisting}
-\end{tiny}
-
-Primero, se verifica que el \emph{Nodo} se haya repetido mas de 70 veces.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
         Si contador_Nodo > 70 Entonces
-\end{lstlisting}
-\end{tiny}
-
-En el caso de ser verdadera la verificaci\'on de la l\'inea 6, se verifica 
- que el \emph{Nodo} exista en una lista de nodos llamada \emph{Secuencia}, 
- esta es una tarea que ha realizado el usuario.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
             Si Nodo existe en Secuencia Entonces
-\end{lstlisting}
-\end{tiny}
-
-En el caso de ser verdadera la verificaci\'on de la l\'inea 7, se verifica 
- que la \emph{Secuencia} exista en la \emph{lista\_Secuencias}.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
-                Si Secuencia existe en lista_Secuencias Entonces
-\end{lstlisting}
-\end{tiny}
-
-Si la verificaci\'on de la l\'inea 7 es verdadera, se verifica que la 
- \emph{Secuencia} se haya repetido mas de 5 veces, para validar que le pueda 
- ser de utilidad al usuario, adem\'as se verifica que la \emph{secuencia} no 
- exista en la \emph{lista\_Tareas} o en la \emph{lista\_Ignoradas}, ya que 
- esto significar\'ia que ha sido encontrada anteriormente. 
- En caso de que esta validaci\'on de la l\'inea 9 resulte verdadera
- y que el usuario considere que s\'i le es \'util, se le solicita 
- que le asigne un nombre a la \emph{Secuencia} mostrada. Posteriormente en la 
- l\'inea 11 se lee la \emph{Respuesta} introducida por el usuario.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
-                    Si contador_Secuencia > 5 Y Secuencia No existe en lista_Tareas O en lista_Ignoradas Entonces
-                        Escribir ``Si desea Guardar la tarea [Secuencia], escriba un nombre''
-                        Leer Respuesta
-\end{lstlisting}
-\end{tiny}
-
-En caso de que la \emph{respuesta} sea un nombre para la acci\'on se ejecuta 
- la l\'inea 14, en la que se agrega la \emph{Secuencia} a una 
- \emph{lista\_Tareas}, que son las \emph{Tareas} a las que tiene acceso el 
- usuario, para poder ejecutarlas. En caso contrario se prosigue con la 
- l\'inea 15, agregando la \emph{Secuencia} a una \emph{lista\_Ignoradas}, 
- estas son las tareas que el usuario ha decidido que no le son de utilidad y 
- por tal no se le volver\'an a mostrar.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]  
-                        Si Respuesta es nombre Entonces
-                            Agregar Secuencia a lista_Tareas
-                        Si no Entonces 
-                            Agregar Secuencia a lista_Ignoradas
-\end{lstlisting}
-\end{tiny}
-
-En caso contrario de que la verificaci\'on de la l\'inea 9 no sea verdadera, 
- en la l\'inea 17, se incrementa en 1 el \emph{contador\_Secuencia}, para 
- indicar que se ha usado una vez m\'as la \emph{Secuencia}.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
-                    Si no Entonces
-                        Incrementar contador_Secuencia
-\end{lstlisting}
-\end{tiny}
-
-Para el caso de que la verificaci\'on de la l\'inea 8 sea falsa, se prosigue 
- con la l\'inea 19, agregando la \emph{Secuencia} a la 
- \emph{lista\_Secuencias}.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
-                Si no Entonces
-                    Agregar Secuencia a Lista_Secuencias
-\end{lstlisting}
-\end{tiny}
-
-La instrucci\'on 20 esta contenida en el caso verdadero de la verificaci\'on 
- de la l\'inea 7, por tal, s\'i el \emph{Nodo} existe en la \emph{Secuencia}, 
- despu\'es de verificar si es una \emph{Tarea} o no, se \emph{Borra} la 
- \emph{Secuencia} dej\'andola sin \emph{Nodos}.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]            
-            Borrar Secuencia
-\end{lstlisting}
-\end{tiny}
-
-La instrucci\'on 21 es el caso contrario de la verificaci\'on de la línea 7, 
- por tal, en caso de que el \emph{Nodo} no se encuentre en la 
- \emph{Secuencia}, este se agregar\'a.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]            
+                Ejecutar Seleccion_Tarea
+                Borrar Secuencia
             Si no Entonces
                Agregar nodo a Secuencia
-\end{lstlisting}
-\end{tiny}
-
-La l\'inea 23 es para el caso falso de la verificaci\'on de la l\'inea 6, 
- como el \emph{Nodo} no cumple la condici\'on de tener mas de 70 
- repeticiones, se \emph{Borra} la \emph{Secuencia}.
-
-\begin{tiny}
-\begin{lstlisting}[style=C]		
         Si no Entonces
+            Ejecutar Seleccion_Tarea
             Borrar Secuencia
-\end{lstlisting}
-\end{tiny}
-
-
-En la l\'inea 25, se presenta el caso contrario de la (l\'inea 4), que el 
- \emph{Nodo} no exista en el grafo, este se agrega (l\'inea 26) en el 
- \emph{Grafo}, enlaz\'andolo desde el \emph{Nodo} anterior. 
-
-
-\begin{tiny}
-\begin{lstlisting}[style=C]
     Si no Entonces
         Agregar Nodo en Grafo
+Fin Mientras
+Fin Procedimiento 
 \end{lstlisting}
 \end{tiny}
 
-
-Por ultimo; en la l\'inea 27 se encuentra el final del \emph{Mientras} que se 
- inici\'o en la l\'inea 2, y en la l\'inea 28 est\'a el final del 
- \emph{Procedimiento monitoreo} que se empez\'o en la l\'inea 1.
-
 \begin{tiny}
-\begin{lstlisting}[style=C]
-Fin Mientras
-Fin Procedimiento 
+\begin{lstlisting}[name=seleccion]
+Procedimiento Seleccion_Tarea
+Si Secuencia existe en lista_Secuencias Entonces
+    Si contador_Secuencia > 5 Y Secuencia No existe en lista_Tareas O en lista_Ignoradas Entonces
+        Escribir ``Si desea Guardar la tarea [Secuencia], escriba un nombre''
+        Leer Respuesta
+        Si Respuesta es nombre Entonces
+            Agregar Secuencia a lista_Tareas
+        Si no Entonces 
+            Agregar Secuencia a lista_Ignoradas
+    Si no Entonces
+        Incrementar contador_Secuencia
+Si no Entonces
+    Agregar Secuencia a Lista_Secuencias
+Fin Procedimiento
 \end{lstlisting}
 \end{tiny}
