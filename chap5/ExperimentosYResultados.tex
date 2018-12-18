@@ -1,4 +1,4 @@
-\subsection{Experimentos y resultados}
+\section{Resultados de experimentaci\'on}
 
 El uso del software no se ve limitado a las personas con movilidad reducida,
  este le puede servir incluso a las personas que no tengan discapacidad 
@@ -9,8 +9,8 @@ El uso del software no se ve limitado a las personas con movilidad reducida,
  cotidianas en una computadora.
 
 
-En el periodo de aproximadamente 3 meses comprendido del 24/02/2018 al 
- 30/05/2018 las personas tuvieron encendida su computadora diferente cantidad 
+En el periodo de aproximadamente 4 meses comprendido del 24/02/2018 al 
+ 30/06/2018 las personas tuvieron encendida su computadora diferente cantidad 
  de tiempo el cual se muestra en la segunda columna de la tabla 
  \ref{infodata}. Como ya se explic\'o anteriormente en el cap\'itulo 
  \ref{sec:chapter4} una acci\'on realizada por el usuario genera un nodo, 
@@ -32,12 +32,13 @@ Se observa en la tabla \ref{infodata} que el sujeto \textbf{n\'umero 3}
 
 \begin{table}[]
 \centering
+\scalebox{0.9}{
 \begin{tabular}{cccc}
 \hline
-No. de Sujeto	
-&   Tiempo de Uso (Hr:Min)		
-&	N\'umero de Nodos	
-&   Repeticiones 	\\   
+\textbf{No. de Sujeto}	
+&   \textbf{Tiempo de Uso (Hr:Min)}		
+&	\textbf{N\'umero de Nodos}
+&   \textbf{Repeticiones} 	\\   
 \hline
 
 1				
@@ -62,6 +63,7 @@ No. de Sujeto
 \hline
 
 \end{tabular}
+}
 \caption{Informaci\'on de los datos recabados.}
 \label{infodata}
 \end{table}
@@ -95,9 +97,10 @@ Como filtro adicional, se limit\'o a obtener secuencias de
  
 
 En ambas tablas mencionadas (\ref{tableRes1} y \ref{tableRes2}) se 
- muestra la cantidad de secuencias aceptadas, rechazadas de acuerdo con los 
- criterios mencionados anteriormente y el procentaje correspondiente a las 
- secuencias aceptadas respecto al total encontrado. 
+ muestra la cantidad de \emph{Secuencias Aceptables} de acuerdo con los 
+ criterios mencionados anteriormente y el \emph{Porcentaje de Precisi\'on}
+ correspondiente a las \emph{Secuencias Aceptables} respecto al \emph{Total de 
+ Secuencias Encontradas}
  
  
 Por ejemplo, una de la tareas que se ver\'ian afectadas por las limitantes
@@ -112,61 +115,68 @@ Por ejemplo, una de la tareas que se ver\'ian afectadas por las limitantes
 
 En la tabla \ref{tableRes1} cabe destacar que el sujeto \textbf{n\'umero 1}
  es al que se le detectaron mayor numero de secuencias y as\'i mismo es el 
- que tiene mayor n\'umero de secuencias aceptadas con el 36\% de
- \emph{asertividad}($P_A$), porcentaje obtenido de la ecuaci\'on
+ que tiene mayor n\'umero de \emph{Secuencias Aceptables} con el 36\% como
+ \emph{Porcentaje de Precisi\'on}($P_P$), porcentaje obtenido de la ecuaci\'on
  \ref{eqAsertividad}, en la que se realiza la divici\'on de las 
- \emph{Secuencias Aceptadas} ($S_A$) multiplicadas por $100$ entre el 
+ \emph{Secuencias Aceptables} ($S_A$) multiplicadas por $100$ entre el 
  \emph{Total de Secuencias Encontradas} ($S_T$); el sujeto \textbf{n\'umero 
- 3} y \textbf{n\'umero 4} son los que obtuvieron menos secuencias aceptadas y 
- un menor porcentaje de asertividad con un 32.33\% y 31.11\% respectivamente.
+ 3} y \textbf{n\'umero 4} son los que obtuvieron menos \emph{Secuencias
+ Aceptables} y un menor \emph{Porcentaje de Precisi\'on} con un 32.33\% y
+ 31.11\% respectivamente.
 
 
 \begin{equation}
-P_A = \dfrac{ S_A \cdot 100}{S_T}
+P_P = \dfrac{ S_A \cdot 100}{S_T}
 \label{eqAsertividad}
 \end{equation}
  
  
 En la tabla \ref{tableRes2} se observa que el sujeto \textbf{n\'umero 1} es 
- el que tiene mayor n\'umero de secuencias aceptadas, sin embargo, es el que 
- tiene el menor porcentaje de asertividad con el 43.65\%, mientras que el 
- sujeto \textbf{n\'umero 2} es el que tiene la mayor asertividad con el 
- 45.09\%.
+ el que tiene mayor n\'umero de \emph{Secuencias Aceptables}, sin embargo, 
+ es el que tiene el menor \emph{Porcentaje de Precisi\'on} con el 43.65\%, 
+ mientras que el sujeto \textbf{n\'umero 2} es el que tiene la mayor
+ \emph{precisi\'on} con el 45.09\%.
 
 
 Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea
- que la primera secuencia sea del agrado del usuario o no, la siguiente 
- secuencia puede contener la primera con alguna acci\'on adicional y es mas 
- probable que esta variante ya sea de utilidad al usuario. 
+ que la primer secuencia sea del agrado del usuario o no, la siguiente 
+ secuencia puede contenerla con alguna acci\'on adicional y es mas 
+ probable que esta variante, sea de utilidad al usuario. 
 
 
 \begin{table}[]
 \centering
 \begin{tabular}{cccc}
 \hline
-No. de Sujeto	
-&	Secuencias Aceptadas	
-&   Secuencias Rechazadas	
-&	Asertividad		\\ \hline
+\textbf{No. de }	
+&	\textbf{Secuencias }	
+&   \textbf{Secuencias }	
+&	\textbf{Porcentaje de }	\\
+
+\textbf{Sujeto}
+&	\textbf{Aceptables}
+&	\textbf{Totales}
+&	\textbf{Precisi\'on}
+	\\ \hline
 
 1				
 &	189						
-&	336						
+&	525						
 &	36.00 \%		\\
 
 2				
 &	165						
-&	322						
+&	487						
 &	33.88 \%		\\
 
 3
 &	151
-&	316
+&	467
 &	32.33 \%		\\
 
 4
 &	56
-&	124
+&	180
 &	31.11 \%		\\
 \hline
 \end{tabular}
@@ -180,29 +190,35 @@ No. de Sujeto
 \centering
 \begin{tabular}{cccc}
 \hline
-No. de Sujeto
-&	Secuencias Aceptadas
-&   Secuencias Rechazadas
-&	Asertividad		\\ \hline
+\textbf{No. de }	
+&	\textbf{Secuencias }	
+&   \textbf{Secuencias }	
+&	\textbf{Porcentaje de }	\\
+
+\textbf{Sujeto}
+&	\textbf{Aceptables}
+&	\textbf{Totales}
+&	\textbf{Precisi\'on}
+	\\ \hline
 
 1
 &	179
-&	231
+&	410
 &	43.65 \%		\\
 	
 2
 &	170
-&	207
+&	377
 &	45.09 \%		\\
 
 3
 &	154
-&	192
+&	346
 &	44.50 \%		\\
 
 4
 &	52
-&	67
+&	119
 &	43.69 \%		\\
 \hline
 \end{tabular}
@@ -215,8 +231,8 @@ No. de Sujeto
 Recapitulando, para que una tarea sea identificable; los nodos que forman la
  secuencia deben de tener un m\'inimo de 75 repeticiones cada uno y cumplir 
  con las restricciones planteadas; no empezar con la acci\'on \emph{Release}, 
- no terminar con la acci\'on \emph{Pressed} y la longitud es un m\'ultiplo de 
- 2, por lo tanto las secuencias mostradas a continuaci\'on cumplen con estas 
+ no terminar con la acci\'on \emph{Pressed} y la longitud m\'inima de 
+ 2, por lo tanto, las secuencias mostradas a continuaci\'on cumplen con estas 
  car\'acter\'isticas:
 \\
 \\
