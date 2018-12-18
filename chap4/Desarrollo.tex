@@ -19,7 +19,7 @@ Para realizar la b\'usqueda de un nodo en espec\'ifico en el grafo, se
  importa el tama\~no o complejidad del grafo, no es necesario
  realizar un recorrido para localizar un nodo en espec\'ifico.
 
-
+\newpage
 El software fue dividido en 4 partes; \textbf{\emph{monitoreo}},
  \textbf{\emph{respaldo}}, \textbf{\emph{carga}} y 
  \textbf{\emph{ejecuci\'on}}:
@@ -39,8 +39,9 @@ El software fue dividido en 4 partes; \textbf{\emph{monitoreo}},
 
 
 Al detectar alguna de las acciones mencionadas se registra la informaci\'on
- correspondiente (Tiempo de espera, acci\'on, [tecla, bot\'on, coordenadas o 
- direcci\'on del scroll]) en una lista en memoria, posteriormente un hilo de 
+ correspondiente (Tiempo de espera, dispositivo, acci\'on, [tecla, bot\'on, 
+ coordenadas o direcci\'on del scroll]) en una lista en memoria, 
+ posteriormente un hilo de 
  procesamiento lee la lista e intenta crear el nodo o en caso de que el nodo 
  ya exista se debe buscar dicho nodo en el grafo y verificar que la
  relaci\'on con el nodo anterior. Adem\'as, se eval\'ua si la secuencia es 
@@ -54,7 +55,7 @@ Al detectar alguna de las acciones mencionadas se registra la informaci\'on
 
 \item { \textbf{\emph{Respaldo}}, lee la lista de acciones, el diccionario
  de tareas y la lista de secuencias ignoradas anteriormente mencionadas, en 
- la explicacion del monitoreo y las almacena en archivos de texto. Para
+ la explicaci\'on del monitoreo y las almacena en archivos de texto. Para
  realizar esta tarea fue necesario asignarla a un hilo de ejecuci\'on que
  realizar\'a la tarea cada 120 segundos.}
 
