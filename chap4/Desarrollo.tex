@@ -1,6 +1,6 @@
 
 El algoritmo mostrado en la secci\'on anterior fue implementado en el
- lenguaje de programaci\'on \emph{Python} versi\'on 3.6.3 aprovechando de la
+ lenguaje de programaci\'on \emph{Python} versi\'on 3.6.3, aprovechando la
  versatilidad que este proporciona con las variables, ya que
  no es necesario especificar un tipo, pues este se asigna al momento de 
  crearla. Tomando en consideraci\'on esto, solo se defini\'o una clase 
@@ -42,11 +42,11 @@ Al detectar alguna de las acciones mencionadas se registra la informaci\'on
  correspondiente (Tiempo de espera, dispositivo, acci\'on, [tecla, bot\'on, 
  coordenadas o direcci\'on del scroll]) en una lista en memoria, 
  posteriormente un hilo de 
- procesamiento lee la lista e intenta crear el nodo o en caso de que el nodo 
- ya exista se debe buscar dicho nodo en el grafo y verificar que la
+ procesamiento lee la lista e intenta crear el nodo o en caso de que este 
+ ya exista se debe buscar en el grafo y verificar la
  relaci\'on con el nodo anterior. Adem\'as, se eval\'ua si la secuencia es 
- candidata para formar parte de una secuencia, en caso dado se almacenar\'a 
- en una lista temporal y posteriormente si la secuencia es una tarea 
+ candidato para formar parte de una secuencia, en caso dado se almacenar\'a 
+ en una lista temporal y posteriormente si esta es una tarea 
  repetitiva, se almacenara en otra lista para poder contabilizar las 
  repeticiones de esta y mostr\'arsela al usuario; si \'el decide que es 
  una tarea \'util, esta se almacenar\'a en otro diccionario con el comando
@@ -57,13 +57,13 @@ Al detectar alguna de las acciones mencionadas se registra la informaci\'on
  de tareas y la lista de secuencias ignoradas anteriormente mencionadas, en 
  la explicaci\'on del monitoreo y las almacena en archivos de texto. Para
  realizar esta tarea fue necesario asignarla a un hilo de ejecuci\'on que
- realizar\'a la tarea cada 120 segundos.}
+ realizar\'a la ejecuci\'on cada 120 segundos.}
 
 
 \item{ \textbf{\emph{Carga}}, se ejecuta una sola vez al iniciar el programa 
  leyendo los archivos mencionados (en caso de existir), empezando con la 
  lista de acciones realizadas por el usuario, para reconstruir el grafo, 
- pero sin realizar la b\'usqueda de tareas, posteriormente, las tareas 
+ pero sin realizar la b\'usqueda de tareas, posteriormente, las que han sido 
  guardadas se vuelven a colocar en el diccionario de tareas y finalmente se 
  restaura la lista de las secuencias ignoradas con los datos respaldados, 
  restaurando el sistema tal cual estaba antes de finalizar el programa.}
@@ -72,8 +72,8 @@ Al detectar alguna de las acciones mencionadas se registra la informaci\'on
 \item{ \textbf{\emph{Ejecuci\'on}}, se desarroll\'o una interfaz gr\'afica 
  simple con \emph{TkInter} para que el usuario interact\'ue con el software,  
  ver figura \ref{fig:v01}, en la cual se observa la ventana principal y 
- desde la parte superior se aprecia al asistente amarillo creado para esta 
- aplicaci\'on sobre una lista con algunas tareas identificables por 
+ desde la parte superior se aprecia al asistente amarillo, creado para esta 
+ aplicaci\'on, sobre una lista con algunas tareas identificables por 
  n\'umeros y en la parte inferior un bot\'on para que la computadora realice 
  la tarea seleccionada en la lista. Para lo cual se defini\'o un diccionario 
  con los comandos posibles para que se traduzcan del texto capturado al 
