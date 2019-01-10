@@ -4,16 +4,15 @@ El uso del software no se ve limitado a las personas con movilidad reducida,
  este le puede servir incluso a las personas que no tengan discapacidad 
  alguna, ya que no va por una tarea objetivo espec\'ifica, sino por las 
  actividades que realice la persona de forma frecuente sin importar cuales 
- sean. Con esto en mente, se logr\'o obtener 5 archivos con la lista de 
- acciones que realizaron 4 individuos sin discapacidades y un quinto con 
- discapacidad en brazos o manos en sus actividades cotidianas en una 
- computadora
-
-
-En el periodo de aproximadamente 4 meses comprendido del 24/02/2018 al 
- 30/06/2018 para las primeras 4 personas, mientras que, la persona 
- condiscapacidad solo uso la computadora durante 6 dias. Durante estos 
- periodos las personas tuvieron encendida su computadora diferente cantidad 
+ sean. Con esto en mente, se lograr\'on obtener los archivos con la lista de
+ acciones de 7 personas (1 con discapacidad en brazos y manos y 6 sin 
+ discapacidades), que realizaban sus actividades cotidianas en sus propios 
+ equipos de c\'omputo, esto durante diferentes periodos de tiempo; los primeros 
+ cuatro, fueron monitoreados en un plazo de 4 meses; el quinto, 7 d\'ias y los 
+ \'ultimos dos, durante 1 mes. 
+ 
+Durante los periodos mencionados las personas tuvieron encendida su 
+ computadora diferente cantidad 
  de tiempo el cual se muestra en la segunda columna de la tabla 
  \ref{infodata}. Como ya se explic\'o anteriormente en el cap\'itulo 
  \ref{sec:chapter4} una acci\'on realizada por el usuario genera un nodo, 
@@ -25,12 +24,13 @@ En el periodo de aproximadamente 4 meses comprendido del 24/02/2018 al
 Se observa en la tabla \ref{infodata} que el sujeto \textbf{n\'umero 3}
  es el que tiene el mayor tiempo de uso con mas de 1060 horas, con
  1,448,016 nodos generados y 378,541 veces que se repiti\'o un nodo como 
- m\'aximo; mientras que el sujeto \textbf{n\'umero 1} con 1,494,792 nodos, es 
- el que obtuv\'o mayor cantidad de nodos reportados en 166 horas y 23 minutos 
- con 46,036 repeticiones de un nodo. Finalmente, el sujeto \textbf{n\'umero 
- 5} tiene el menor tiempo con 17 horas y 56 minutos, con 281,794 nodos y 
- 8,945 repeticiones reportadas.
-
+ m\'aximo; mientras que el sujeto \textbf{n\'umero 6} con 1,570,951 nodos, es 
+ el que obtuv\'o mayor cantidad de nodos reportados en 285 horas y 45 minutos 
+ con 130,220 repeticiones de un nodo. Esta diferencia en el n\'umero de nodos, 
+ se puede deber a la resoluci\'on de la pantalla usado, ya que se monitorea el 
+ desplazamiento del rat\'on por pixel, por lo tanto, a mayor resoluci\'on mayor 
+ cantidad de pixeles y m\'as nodos por movimientos del rat\'on.
+ 
 
 \begin{table}[]
 \centering
@@ -67,6 +67,16 @@ Se observa en la tabla \ref{infodata} que el sujeto \textbf{n\'umero 3}
 &	17:56
 &	281,794
 &	8,945				\\
+
+6
+&	285:45
+&	1,570,951
+&	130,220				\\
+
+7	
+&	37:40
+&	418,966
+&	23,660				\\
 \hline
 
 \end{tabular}
@@ -102,7 +112,7 @@ Las secuencias de acciones que empieza con la acci\'on \emph{Release} fueron
  evitan que se genere una secuencia completa de la tarea, dejando la tecla 
  presionada.
 
-
+\newpage
 
 En la figura \ref{fig:graphKB}, se presenta el grafo generado con las
  primeras 150 acciones del teclado del sujeto \textbf{n\'umero 3},
@@ -168,30 +178,38 @@ Como filtro adicional, se limit\'o a obtener secuencias de
  \ref{tableRes2}). 
  
 
-En la tabla \ref{tableRes1} cabe destacar que el sujeto \textbf{n\'umero 1}
- es al que se le detectaron mayor numero de secuencias y as\'i mismo es el 
- que tiene mayor n\'umero de \emph{Secuencias Aceptables} con el 36\% como
- \emph{Porcentaje de Precisi\'on}($P_P$), porcentaje obtenido de la ecuaci\'on
- \ref{eqAsertividad}, en la que se realiza la divici\'on de las 
- \emph{Secuencias Aceptables} ($S_A$) multiplicadas por $100$ entre el 
- \emph{Total de Secuencias Encontradas} ($S_T$); el sujeto \textbf{n\'umero 
- 4} y \textbf{n\'umero 5} son los que obtuvieron menos \emph{Secuencias
- Aceptables} con un 31.11\%  y 34.64\% respectivamente de \emph{Porcentaje
- de Precisi\'on}.
+El sujeto \textbf{n\'umero 1} es el que obtuvo mayor n\'umero de 
+ \emph{Secuencias Aceptables}, 189 secuencias lo cual corresponde a un 36\% de
+ \emph{Porcentaje de Precisi\'on}($P_P$), porcentaje obtenido de la ecuaci\'on 
+ \ref{eqAsertividad}, en la que se realiza la divici\'on de las \emph{Secuencias 
+ Aceptables} ($S_A$) multiplicadas por $100$ entre el \emph{Total de Secuencias 
+ Encontradas} ($S_T$).
 
 
 \begin{equation}
 P_P = \dfrac{ S_A \cdot 100}{S_T}
 \label{eqAsertividad}
 \end{equation}
- 
- 
-En la tabla \ref{tableRes2} se observa que el sujeto \textbf{n\'umero 1} es 
- el que tiene mayor n\'umero de \emph{Secuencias Aceptables}, sin embargo, 
- es el que tiene el menor \emph{Porcentaje de Precisi\'on} con el 43.65\%, 
- mientras que el sujeto \textbf{n\'umero 5} es el que tiene la mayor
- \emph{precisi\'on} con el 45.37\%.
 
+
+El caso contrario es el sujeto \textbf{n\'umero 6}, el cual presenta 43 
+ \emph{Secuencias Aceptables} y 28.47\% como \emph{Porcentaje de Precisi\'on}, 
+ lo cual se podr\'ia deber a que este uso mayormente el rat\'on, a diferencia 
+ del sujeto \textbf{n\'umero 5} (la persona con discapacidad), que obtuvo un 
+ \emph{Porcentaje de Precisi\'on} de 35.48\%, pese a ser el usuario que 
+ interactu\'o menos tiempo con la computadora (17 horas y 56 minutos), 
+ tambi\'en, fue el que obtuvo la menor cantidad de nodos (281,794) y el numero
+ m\'as bajo de repeticiones (8,945 repeticiones), ver tabla \ref{infodata}.
+
+ 
+En la tabla \ref{tableRes2}, se aprecia un incremento en el \emph{Porcentaje de 
+ Precisi\'on} con respecto a la tabla \ref{tableRes1}, esto es debido, a la
+ eliminaci\'on previa de las acciones unitarias, que por las restricciones 
+ establecidas eran rechazadas, lo cual lleva a un incremento considerable en los
+ \emph{Porcentajes de Precisi\'on} de los individuos, principalmente, el sujeto
+ \textbf{n\'umero 6}, ya que se increment\'o del 28.47\% al 48.71\%. 
+
+\newpage
 
 Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea
  que la primer secuencia sea del agrado del usuario o no, la siguiente 
@@ -235,9 +253,20 @@ Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea
 &	31.11 \%		\\
 
 5
-&	53
-&	153
-&	34.64\%			\\
+&	55
+&	155
+&	35.48\%			\\
+
+6
+&	43
+&	151
+&	28.47\%			\\
+
+7
+&	66
+&	205
+&	32.19\%			\\
+
 \hline
 \end{tabular}
 \caption{Tabla de resultados con secuencias de una longitud m\'inima de 
@@ -285,6 +314,16 @@ Por el hecho de que este es un m\'etodo de aprendizaje acumulativo, as\'i sea
 &	49
 &	108
 &	45.37\%			\\
+
+6
+&	38
+&	78
+&	48.71\%			\\
+
+7
+&	60
+&	145
+&	41.37\%			\\
 \hline
 \end{tabular}
 \caption{Tabla de resultados con secuencias de una longitud m\'inima de 
